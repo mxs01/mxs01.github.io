@@ -1,0 +1,17 @@
+.contact-me__button{
+    text-decoration: none;
+
+    padding:15px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: 3px #F64C72 solid;
+    color: #F64C72;
+    font-variant: small-caps;
+    background-color: #242582;
+}
+
+.contact-me__button:hover{
+    background-color: #F64C72;
+    color: #242582;
+    border-color: #F64C72;
+}

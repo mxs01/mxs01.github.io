@@ -1,0 +1,57 @@
+.impressum__container{
+    height: fit-content;
+    width: 100%;
+    /*background-color: rgba(255, 235, 205, 0.834);*/
+
+    margin-bottom: 10%;
+    
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: whitesmoke; 
+}
+
+.impressum__text__container{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+
+    background-color: #553D67;
+    padding: 20px;
+
+}
+
+.impressum__title{
+    align-self: center;
+
+    font-variant: small-caps;
+}
+
+.impressum__text{
+    width: fit-content;
+
+    font-size: 1.3rem;  
+    
+    line-height: 2.4rem;
+}
+
+.contact-me__button{
+    color: whitesmoke;
+    text-decoration: none;
+
+    border: 2px whitesmoke solid;
+    margin-bottom: 15px;
+    padding: 0px !important;
+}
+
+.contact-me__button:hover{
+    color: #553D67;
+    border-color: #553D67;
+    background-color: whitesmoke;
+
+}
+

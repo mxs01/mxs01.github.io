@@ -1,0 +1,96 @@
+.skill__container{
+    width: 40rem;
+
+    box-sizing: border-box;
+
+    margin: 20px;
+
+    background-color:#99738E;
+    display: grid;
+    grid-template-columns: 10% repeat(4, 20%);
+    grid-template-rows: 100%;
+
+
+    align-items:center;
+    justify-content: space-around;
+    
+    
+}
+
+.skill__name{
+    vertical-align: middle;
+
+}
+
+.skill__level__container{
+    box-sizing: border-box;
+    width: 90%;
+    height: 10%;
+
+    border-radius: 10px;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: flex-start;
+    justify-content: space-between;
+    align-content: center;
+
+
+    
+    grid-column: 2/6;
+    z-index: 0;
+    
+
+
+
+}
+
+
+
+.skill__checkpoint{
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    z-index: 11;
+    border-radius: 100%;
+    border: 2px black solid;
+
+
+
+
+    
+}
+
+.skill__level__container.beginner{
+    background-image: linear-gradient(to right,#F64C72 0% , gainsboro 0%);
+}
+
+.skill__level__container.intermediate{
+    background-image: linear-gradient(to right,#F64C72 33% , gainsboro 0%);
+}
+
+.skill__level__container.advanced{
+    background-image: linear-gradient(to right,#F64C72 66% , gainsboro 0%);
+}
+
+.skill__level__container.expert{
+    background-image: linear-gradient(to right,#F64C72 100% , gainsboro 0%);
+}
+
+.beginner{
+    background-color: #F64C72;
+}
+
+.intermediate{
+    background-color: #F64C72;
+}
+
+.advanced{
+    background-color: #F64C72;
+}
+
+.expert{
+    background-image: linear-gradient(to right,#F64C72 100% , gainsboro 0%);
+}
+

@@ -1,0 +1,13 @@
+.layout__container {
+    height: 100vh;
+    position: relative;
+    background-color: #242582;
+    overflow: scroll;
+  
+  }
+
+  .main__body__container{
+
+    margin-bottom: 80rem;
+    
+  }
