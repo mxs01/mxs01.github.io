@@ -9,7 +9,7 @@
 .skills__element__container{
     width: 40%;
     height: auto;
-    background-color: #553D67;
+    background-color: var(--backgroundCardDarkPurple);
 
     padding: 10px;
 
@@ -20,6 +20,6 @@
 }
 
 .skills__title{
-    color: #F64C72;
+    color: var(--pinkColor);
     font-variant: small-caps;
 }

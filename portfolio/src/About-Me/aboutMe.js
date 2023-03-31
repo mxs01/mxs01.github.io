@@ -1,11 +1,12 @@
 import './aboutMe.css'
+import logo from './profilePicture.JPG'
 
 
 const AboutMe = () => {
     return (
         <div className='aboutMe__container'>
             <div className='aboutMe__container__image'>
-                <img src="" className='aboutMe__picture'/>
+                <img src={logo} className='aboutMe__picture'/>
             </div>
             <p className='aboutMe__info'>
                 Hi I'm Max, 

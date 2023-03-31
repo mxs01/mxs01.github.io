@@ -1,3 +1,11 @@
+:root{
+  --backgroundColor: #242582;
+  --backgroundLightPurple: #99738E;
+  --backgroundCardDarkPurple: #553d67;
+  --pinkColor: #F64C72;
+
+}
+
 html{
   height: 100vh;
 }

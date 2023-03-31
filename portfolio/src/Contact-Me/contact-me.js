@@ -1,21 +1,55 @@
 import './contact-me.css'
+import { useState } from 'react';
+import Card from '../Card/Card';
 
 import ContactButton from '../Button/Contact-Me-Button/contact-me-button';
 
 const ContactMe = () => {
+
+    const [nameInput, setNameInput] = useState('')
+    const [emailInput, setEmailInput] = useState('')
+    const [subjectInput, setSubjectInput] = useState('')
+    const [messageInput, setMessageInput] = useState('')
+
+    const nameInputHandler = (event) => {
+        setNameInput(event.target.value);
+    }
+
+    const emailInputHandler = (event) => {
+        setEmailInput(event.target.value);
+    }
+
+    const subjectInputHandler = (event) => {
+        setSubjectInput(event.target.value);
+    }
+
+    const messageInputHandler = (event) => {
+        setMessageInput(event.target.value);
+    }
+
+    const validateFormInput = (event) => {
+        event.preventDefault();
+        if (nameInput.trim.length>0 && emailInput.includes('@') && subjectInput.trim.length>3 && messageInput.trim.length>0){
+            console.log('Valid');
+        }
+        else{
+            console.log('Invalid')
+        }
+    }
+
+
     return (
         <div className='contact-me__container'>
-            <div className='form__container'>
+            <Card className='form__container'>
                 <h1 className='page__title'>Contact Me</h1>
-                <form className='contact-me__form'>
-                    
-                    <input className='name' type='text' placeholder='name' required/>
-                    <input className='email' type='email' placeholder='email' required/>
-                    <input className='subject' type='text' placeholder='subject' required/>
-                    <textarea className='message' placeholder='message' required/>
+                <form className='contact-me__form' onSubmit={validateFormInput}>
+                    <input className='name' type='text' placeholder='name' required onChange={nameInputHandler}/>
+                    <input className='email' type='email' placeholder='email' required onChange={emailInputHandler}/>
+                    <input className='subject' type='text' placeholder='subject' required onChange={subjectInputHandler}/>
+                    <textarea className='message' placeholder='message' required onChange={messageInputHandler }/>
+                    <ContactButton/>
                 </form>
-                <ContactButton/>
-            </div>
+            </Card>
         </div>
     );
 }

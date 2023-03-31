@@ -10,12 +10,15 @@ import Skills from './Skills/skills';
 import Impressum from './Impressum/impressum';
 import ContactMe from './Contact-Me/contact-me';
 
+import ErrorPage from './ErrorPage/ErrorPage';
+
 
 const router = createBrowserRouter([
   {path:'', 
+  errorElement: <ErrorPage />,
   element: <LayoutWebsite/>,
   children:[
-  {path:'/', element: <Homepage/>},
+  {index:true, element: <Homepage/>},
   {path:'/about-me', element: <AboutMe/>},
   {path:'/skills', element: <Skills/>},
   {path:'/projects', element: <Projects/>},
@@ -27,11 +30,9 @@ const router = createBrowserRouter([
 
 
 function App() {
-  return (
-    <React.Fragment>
-      <RouterProvider router={router}/>
-    </React.Fragment>
-  );
+  return <RouterProvider router={router}/>
+    
+  
 }
 
 export default App;

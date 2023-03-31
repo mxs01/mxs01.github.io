@@ -1,13 +1,15 @@
 .layout__container {
     height: 100vh;
     position: relative;
-    background-color: #242582;
-    overflow: scroll;
-  
+    background-color: var(--backgroundColor);
+    overflow-y: scroll;
+      
   }
 
-  .main__body__container{
-
-    margin-bottom: 80rem;
+  .main__body__container{ 
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     
   }

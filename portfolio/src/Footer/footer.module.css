@@ -1,19 +1,15 @@
 .footer-container{
     color: #F64C72;   
     width:100%;
-    height: 10%;
+    height: 5%;
     left: 0;
     bottom: 0;
     position:fixed;
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
-    align-items: center;
-    justify-content: space-around;
+    
 
     /*background-color: rgba(0, 0, 0, 0.2);*/
 
-    background-color: #242582;
+    background-color: var(--backgroundColor);
 
     margin-top: 40rem;
 
@@ -25,7 +21,10 @@
 
 
 .nav-bar__container{
-    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
 
 
 }

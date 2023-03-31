@@ -1,4 +1,4 @@
-import './footer.css'
+import classes from './footer.module.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -11,26 +11,24 @@ import { NavLink } from 'react-router-dom'
 
 const Footer = () => {
     return (
-        <div className='footer-container'>
-           <nav className='nav-bar__container'>
-               <div className='copyright__container'>
-                   <NavLink className='copyright__item' to='/impressum'>
-                        <FontAwesomeIcon className='copyright__icon' icon={faCopyright} color='#F64C72'/>
-                        <p className='copyright__owner'>Maximilian Schnitt</p>
+        <div className={classes['footer-container']}>
+           <nav className={classes['nav-bar__container']}>
+               <div className={classes['copyright__container']}>
+                   <NavLink className={classes['copyright__item']} to='/impressum'>
+                        <FontAwesomeIcon className={classes['copyright__icon' ]}icon={faCopyright} color='#F64C72'/>
+                        <p className={classes['copyright__owner']}>Maximilian Schnitt</p>
                     </NavLink>
                </div>
-               <div className='social-network__container'>
+               <div className={classes['social-network__container']}>
                    
-               <Link className="social-network__item" exact="true" activeclassname="active" href="https://github.com/mxs01">
-                    <FontAwesomeIcon className='social-network__icon' icon={faGithub} color='#fff' />
+               <Link className={classes["social-network__item"]} exact="true" activeclassname="active" href="https://github.com/mxs01">
+                    <FontAwesomeIcon className={classes['social-network__icon']} icon={faGithub} color='#fff' />
                </Link>
 
-               <Link className="social-network__item" exact="true" activeclassname="active" href="https://www.linkedin.com/in/maximilian-schnitt-a4334a244/">
-                    <FontAwesomeIcon className='social-network__icon' icon={faLinkedin} color='#fff' />
+               <Link className={classes["social-network__item"]} exact="true" activeclassname="active" href="https://www.linkedin.com/in/maximilian-schnitt-a4334a244/">
+                    <FontAwesomeIcon className={classes['social-network__icon']} icon={faLinkedin} color='#fff' />
                 </Link>
                </div>
-
-
            </nav>
         </div>
     );

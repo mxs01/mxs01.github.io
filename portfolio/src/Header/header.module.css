@@ -38,8 +38,10 @@
 
 .nav-bar__item{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;    
+    font-weight: bold;  
+    font-size: 1.2rem;
     padding: 5px 0;
+    
 
     text-decoration: none;
     color:#F64C72
@@ -51,3 +53,15 @@
     border-bottom: 2px #99738E solid;
     
 }
+
+a.active{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;  
+    font-size: 1.2rem;  
+    padding: 3px;
+
+    text-decoration: none;
+    border-bottom: 2px white solid;
+    color: whitesmoke;
+}
+
