@@ -1,6 +1,6 @@
 .projects__container{
     width: 100%;
-    height: fit-content;
+    height: 100%;
     box-sizing: border-box;
 
     display: flex;
@@ -10,8 +10,7 @@
 
     flex-wrap: wrap;
 
-    margin-top: 20px;
-    margin-bottom: 1rem;
+    margin-bottom: 40rem;
     overflow: scroll;
 
     

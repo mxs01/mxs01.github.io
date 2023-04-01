@@ -1,34 +1,3 @@
-@media (min-width: 600px){
-    .homepage__main-container{
-        color: var(--pinkColor);
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding-top: 10px;
-    
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    
-    }
-    
-    .homepage__content {
-        width: 70%;
-        height: 100%;
-        font-size: 4rem;
-        font-weight: bold;
-        margin: 0;
-        justify-content: center; 
-    
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-    
-    }
-}
-
 .homepage__main-container{
     color: var(--pinkColor);
     width: 100%;
@@ -56,4 +25,14 @@
     align-items: flex-start;
     justify-content: center;
 
+}
+
+@media (min-width: 60rem){
+    .homepage__main-container{
+        height: 80%;
+    }
+    
+    .homepage__content {
+        font-size: 6rem;
+    }
 }

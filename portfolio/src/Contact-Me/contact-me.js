@@ -47,7 +47,7 @@ const ContactMe = () => {
                     <input className='email' type='email' placeholder='email' required onChange={emailInputHandler}/>
                     <input className='subject' type='text' placeholder='subject' required onChange={subjectInputHandler}/>
                     <textarea className='message' placeholder='message' required onChange={messageInputHandler }/>
-                    <ContactButton/>
+                    <ContactButton impressum={false} className={`contact__button`}/>
                 </form>
             </Card>
         </div>

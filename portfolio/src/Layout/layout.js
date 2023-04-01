@@ -10,11 +10,16 @@ import Footer from '../Footer/footer'
 const LayoutWebsite = () => {
     return (
         <div className='layout__container'>
-            <Header/>
+        
+                <Header/>
+            
             <main className='main__body__container'>
                 <Outlet/>
             </main>
+         
             <Footer/>
+            
+
         </div>
     );
 }

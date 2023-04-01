@@ -1,26 +1,7 @@
-@media (min-width: 600px) {
-  .card {
-    width: fit-content;
-    height: fit-content;
-    padding: 1rem 3rem;
-
-    border-radius: 10px;
-    box-shadow: 9px 9px 12px rgba(49, 49, 48, 0.9);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    background-color: var(--backgroundCardDarkPurple);
-  }
-}
-
-
 .card {
   width: 25rem;
   height: fit-content;
-  padding: 0.2rem 3rem 2rem;
+  padding: 2rem 3rem 2rem;
 
   border-radius: 10px;
   box-shadow: 9px 9px 12px rgba(49, 49, 48, 0.9);
@@ -31,6 +12,12 @@
   align-items: center;
 
   background-color: var(--backgroundCardDarkPurple);
+}
+
+@media (min-width: 60rem) {
+  .card {
+    width: fit-content;
+  }
 }
 
 

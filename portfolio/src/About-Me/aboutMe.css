@@ -1,13 +1,13 @@
 .aboutMe__container{
     color: var(--pinkColor);
     width: 100%;
-    height: 100%;
+    height: 80%;
     margin: 0 0;
     padding: 0;
 
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: flex-end;
     box-sizing: border-box;
     border:20%;
@@ -15,14 +15,13 @@
     display: flex;
     flex-direction: column;
     justify-content:space-evenly;
-    align-items: center;
+    align-items:center;
 
 }
 
 .aboutMe__container__image{
-    width: 7rem;
-    height: 8rem;
-
+    width: 10rem;
+    height: 11rem;
     border-radius: 30%;
 
     background-color: rgba(255, 235, 205, 0.834);
@@ -37,13 +36,13 @@
 
 .aboutMe__info{
     width: 50%;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     color: var(--pinkColor);
 
 }
 
 
-@media (min-width: 600px) {
+@media (min-width: 60rem) {
 
     .aboutMe__container{
         color: var(--pinkColor);
