@@ -7,7 +7,7 @@
   }
 
   .main__body__container{ 
-    height: 80%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
