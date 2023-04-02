@@ -1,4 +1,4 @@
-import './contact-me.css'
+import classes from './contact-me.module.css'
 import { useState } from 'react';
 import Card from '../Card/Card';
 
@@ -39,15 +39,15 @@ const ContactMe = () => {
 
 
     return (
-        <div className='contact-me__container'>
-            <Card className='form__container'>
-                <h1 className='page__title'>Contact Me</h1>
-                <form className='contact-me__form' onSubmit={validateFormInput}>
-                    <input className='name' type='text' placeholder='name' required onChange={nameInputHandler}/>
-                    <input className='email' type='email' placeholder='email' required onChange={emailInputHandler}/>
-                    <input className='subject' type='text' placeholder='subject' required onChange={subjectInputHandler}/>
-                    <textarea className='message' placeholder='message' required onChange={messageInputHandler }/>
-                    <ContactButton impressum={false} className={`contact__button`}/>
+        <div className={classes['contact-me__container']}>
+            <Card className={classes['form__container']}>
+                <h1 className={classes['page__title']}>Contact Me</h1>
+                <form className={classes['contact-me__form']} onSubmit={validateFormInput}>
+                    <input className={classes['name']} type='text' placeholder='name' required onChange={nameInputHandler}/>
+                    <input className={classes['email']} type='email' placeholder='email' required onChange={emailInputHandler}/>
+                    <input className={classes['subject']} type='text' placeholder='subject' required onChange={subjectInputHandler}/>
+                    <textarea className={classes['message']} placeholder='message' required onChange={messageInputHandler }/>
+                    <ContactButton/>
                 </form>
             </Card>
         </div>

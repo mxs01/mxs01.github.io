@@ -1,4 +1,4 @@
-import "./projects.css";
+import classes from "./projects.module.css";
 
 import Project from "../Project/project";
 
@@ -58,7 +58,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="projects__container">
+    <div className={classes.projects__container}>
       {projects.map((obj) => (
         <Project
             key={obj.id}

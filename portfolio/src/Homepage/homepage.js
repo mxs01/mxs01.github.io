@@ -1,7 +1,8 @@
-import './homepage.css'
+import classes from './homepage.module.css'
 import AnimateLetters from '../Animation/AnimatedLetters/animatedLetters';
 
 import {useEffect, useState} from 'react'
+import { ClassNames } from '@emotion/react';
 
 const Homepage = () => {
 
@@ -15,8 +16,8 @@ const Homepage = () => {
 
 
     return (
-    <div className='homepage__main-container'>
-        <div className='homepage__content'>
+    <div className={classes.homepage__main__container}>
+        <div className={classes.homepage__content}>
             <AnimateLetters letterClass={letterClass} strArray={firstLine} key={4}/>
             <AnimateLetters letterClass={letterClass} strArray={secondLine} key={40}/>
         </div>

@@ -1,4 +1,4 @@
-import './skills.css'
+import classes from './skills.module.css'
 
 import Skill from '../Skill/skill';
 import Card from '../Card/Card';
@@ -11,10 +11,10 @@ const Skills = () => {
                     {language:'Git', level:'Beginner'}]
 
     return (
-    <div className='skills__container'>
-        <Card className='skills__element__container'>
-            <h1 className='skills__title'>My Skills</h1>
-            {mySkills.map((obj)=> <Skill language={obj.language} level={obj.level}/>)}
+    <div className={classes.skills__container}>
+        <Card className={classes.skills__element__container}>
+            <h1 className={classes.skills__title}>My Skills</h1>
+            {mySkills.map((obj, idx)=> <Skill key={idx} id={idx} language={obj.language} level={obj.level}/>)}
         </Card>
     </div>
     );

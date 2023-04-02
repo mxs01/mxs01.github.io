@@ -1,16 +1,16 @@
-import './impressum.css'
+import classes from'./impressum.module.css'
 
 import { Link } from 'react-router-dom';
 
 const Impressum = () => {
     return(
-        <div className='impressum__container'>
-            <div className='impressum__text__container'>
-                <h1 className='impressum__title'>Impressum</h1>
-                <p className='impressum__text'>
+        <div className={classes.impressum__container}>
+            <div className={classes.impressum__text__container}>
+                <h1 className={classes.impressum__title}>Impressum</h1>
+                <p className={classes.impressum__text}>
                     Angaben gem. § 5 TMG: <br/>
                     Maximilian Schnitt <br/>
-                    Kontaktaufnahme: <Link className='contact-me__link' to='/contact-me'>Contact Me</Link> <br/>
+                    Kontaktaufnahme: <Link className={classes['contact-me__link']} to='/contact-me'>Contact Me</Link> <br/>
                     Haftungsausschluss – Disclaimer: <br/>
                     Haftung für Inhalte <br/>
                     Alle Inhalte unseres Internetauftritts wurden mit größter Sorgfalt und nach bestem Gewissen erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.

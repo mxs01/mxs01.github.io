@@ -28,6 +28,10 @@
         width: 40rem;
         height: 100%;
     }
+
+    .skills__title{
+        font-size: 3rem;
+    }
     
     .skills__element__container{
         width: 40%;

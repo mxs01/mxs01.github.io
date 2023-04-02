@@ -67,8 +67,8 @@
     }
 
     .aboutMe__container__image{
-        width: 17rem;
-        height: 20rem;
+        width: 25rem;
+        height: 27rem;
     
         border-radius: 30%;
     
@@ -84,7 +84,7 @@
     
     .aboutMe__info{
         width: 50%;
-        font-size: 2rem;
+        font-size: 3.5rem;
         color: var(--pinkColor);
     
     }
