@@ -1,28 +1,37 @@
+@keyframes bouncingEffect {
+  50%{
+    transform: scale(120%);
+    opacity: 0.5;
+  }
+  100%{
+    transform: scale(100%);
+    opacity: 1;
+  }
+}
+
 .text-animate {
     display: inline-block;
-    opacity: 0;
-    animation: bounceIn;
-    animation-duration: 1s;
-    animation-delay: 1s;
+    
+    animation-name: bouncingEffect;
+    animation-duration: 0.5s;
     animation-fill-mode: forwards;
+
+    opacity: 0;
+   
+    white-space: pre;
+
     min-width: 10px;
 
   }
-.text-animate-hover {
-    min-width: 10px;
-    display: inline-block;
-    animation-fill-mode: both;
-  
-    &:hover {
-      animation: rubberBand 1s;
-      color: #ffd700;
-    }
-}
-  
 
   
-@for $i from 1 through 35 {
+
+
+
+  
+@for $i from 1 through 2500 {
     .text-animate._#{$i} {
       animation-delay: #{$i / 10}s;
+      
     }
 }
