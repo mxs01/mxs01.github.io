@@ -42,8 +42,10 @@
 
 .copyright__owner{
     font-size: 0.6rem;
+    font-family: var(--fontFamily);
     display: inline;
     margin-left: 8px;
+    vertical-align: middle;
 }
 
 .social-network__container{
@@ -68,7 +70,7 @@
 }
 
 .social-network__icon:hover{
-    color: #F64C72;
+    color: var(--pinkColor);
 }
 
 @media (min-width:60rem) {    

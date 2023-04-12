@@ -4,6 +4,10 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
+    margin-top: 2rem;
+
+    font-family: var(--fontFamily);
 }
 
 .skills__element__container{

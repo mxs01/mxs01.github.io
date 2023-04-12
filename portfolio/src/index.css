@@ -1,8 +1,15 @@
 :root{
-  --backgroundColor: #242582;
-  --backgroundLightPurple: #99738E;
-  --backgroundCardDarkPurple: #553d67;
-  --pinkColor: #F64C72;
+  
+
+  
+    --backgroundColor: #242582;
+    --backgroundLightPurple: #99738E;
+    --backgroundCardDarkPurple: #553d67;
+    --pinkColor: #F64C72;
+
+    --fontFamily:  Arial, Helvetica, sans-serif;
+  
+  
 
 
 }

@@ -13,7 +13,7 @@
     align-items: flex-start;
 
     margin-top: 8rem;
-    margin-bottom: 40rem;
+    margin-bottom: 0rem;
   }
 
   @media (min-width){
@@ -21,7 +21,7 @@
       height: 80%;
       
       margin-top: 10rem;
-      margin-bottom: 40rem;
+      margin-bottom: 0rem;
     }
   }
 

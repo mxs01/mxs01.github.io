@@ -12,6 +12,8 @@
     grid-template-columns: 20% repeat(4, 20%);
     grid-template-rows: 100%;
 
+    font-family: var(--fontFamily);
+
 
     align-items:center;
     justify-content: space-around;

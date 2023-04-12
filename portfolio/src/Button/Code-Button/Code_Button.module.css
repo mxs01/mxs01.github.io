@@ -14,6 +14,7 @@
     border-color: rgb(78, 30, 134);
 
     font-weight: bold;
+    font-family: var(--fontFamily);
 
     display: flex;
     justify-content: center;
@@ -22,7 +23,7 @@
 }
 
 .code__button__link:hover{
-    background-color: var(--backgroundLightPurple);
+    background-color: #fbf8cc;
 }
 
 

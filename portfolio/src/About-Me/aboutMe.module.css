@@ -17,6 +17,8 @@
     justify-content:space-evenly;
     align-items:center;
 
+    font-family: var(--fontFamily);
+
 }
 
 .aboutMe__container__image{
@@ -84,7 +86,7 @@
     
     .aboutMe__info{
         width: 60%;
-        font-size: 3.5rem;
+        font-size: 3.3rem;
         color: var(--pinkColor);
     
     }
