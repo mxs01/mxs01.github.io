@@ -1,15 +1,17 @@
 .code__button__link{
-    width: 8rem;
-    height: 4rem;
+    width: 7rem;
+    height: 2rem;
 
     padding:10px;
     
     text-decoration: none;
-    font-size: 2.5rem;
+    font-size: 1.7rem;
 
     box-sizing: border-box;
     border-radius: 10px;
     background-color: aliceblue;
+    color: rgb(78, 30, 134);
+    border-color: rgb(78, 30, 134);
 
     font-weight: bold;
 
@@ -23,3 +25,27 @@
     background-color: var(--backgroundLightPurple);
 }
 
+
+@media (min-width:60rem) {
+    .code__button__link{
+        width: 8rem;
+        height: 4rem;
+    
+        padding:10px;
+        
+        text-decoration: none;
+        font-size: 2.5rem;
+    
+        box-sizing: border-box;
+        border-radius: 10px;
+        background-color: aliceblue;
+    
+        font-weight: bold;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+}
