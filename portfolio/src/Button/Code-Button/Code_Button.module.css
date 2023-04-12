@@ -1,0 +1,25 @@
+.code__button__link{
+    width: 8rem;
+    height: 4rem;
+
+    padding:10px;
+    
+    text-decoration: none;
+    font-size: 2.5rem;
+
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: aliceblue;
+
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.code__button__link:hover{
+    background-color: var(--backgroundLightPurple);
+}
+

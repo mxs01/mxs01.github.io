@@ -19,10 +19,10 @@ const Skill = (props) => {
         <div className={classes.skill__container}>
             <h2 className={classes.skill__name}>{props.language}</h2>
             <div className={`${classes.skill__level__container} ${addClassName(props)}`}>
-                <div className={`${classes.skill__checkpoint} ${(props.level ==='Beginner'||props.level ==='Intermediate' || props.level ==='Advanced'||props.level ==='Expert') ? 'beginner':''}`}><p>Beginner</p></div>
-                <div className={`${classes.skill__checkpoint} ${(props.level ==='Intermediate' || props.level ==='Advanced'||props.level ==='Expert') ? 'intermediate':''}`}><p>Intermediate</p></div>
-                <div className={`${classes.skill__checkpoint} ${(props.level ==='Advanced'||props.level ==='Expert') ? 'expert':''}`}><p>Advanced</p></div>
-                <div className={`${classes.skill__checkpoint} ${(props.level ==='Expert') ? 'expert':''}`}><p>Expert</p></div>
+                <div className={`${classes.skill__checkpoint} ${(props.level ==='Beginner'||props.level ==='Intermediate' || props.level ==='Advanced'||props.level ==='Expert') ? classes.beginner:''}`}><p>Beginner</p></div>
+                <div className={`${classes.skill__checkpoint} ${(props.level ==='Intermediate' || props.level ==='Advanced'||props.level ==='Expert') ? classes.intermediate:''}`}><p>Intermediate</p></div>
+                <div className={`${classes.skill__checkpoint} ${(props.level ==='Advanced'||props.level ==='Expert') ? classes.advanced:''}`}><p>Advanced</p></div>
+                <div className={`${classes.skill__checkpoint} ${(props.level ==='Expert') ? classes.expert:''}`}><p>Expert</p></div>
             </div>
         </div>
     );

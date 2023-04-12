@@ -1,72 +1,124 @@
 import classes from "./projects.module.css";
 
 import Project from "../Project/project";
+import { useState } from "react";
+
+import ProjectDetailPage from "../ProjectDetailPage/ProjectDetailPage";
 
 const Projects = () => {
-  let projects = [
+  const [showModal, setShowModal] = useState(false);
+  const [modalContent, setModalContent] = useState({
+    title: "",
+    image: "",
+    language: "",
+    detailedDescription: "",
+    link: "",
+  });
+
+  const projects = [
     {
       id: "p1",
       title: "A* Search Algorithm",
+      image: "",
       language: "Python",
-      information:
-        "I've implemented a GUI implementation of the classic A* algorithm with user interaction",
+      description:"I've implemented a GUI implementation of the classic A* algorithm with user interaction.",
+      detailedDescription:"The user is able to set borders via mouse events and afterwards launch the algorithm with the space button. I've visualized this algorithm to show the decision making of the A* Algorithm.",
       link: "github-link",
     },
     {
       id: "p2",
       title: "",
+      image: "",
       language: "Java",
-      information: "",
+      description: "",
+      detailedDescription:'',
       link: "github-link",
     },
     {
       id: "p3",
       title: "",
+      image: "",
       language: "Java",
-      information: "",
+      description: "",
+      detailedDescription:'',
       link: "github-link",
     },
 
     {
       id: "p4",
+      image: "",
       title: "",
       language: "Java",
-      information: "",
+      description: "",
+      detailedDescription:'',
       link: "github-link",
     },
     {
       id: "p5",
       title: "",
+      image: "",
       language: "Java",
-      information: "",
+      description: "",
+      detailedDescription:'',
       link: "github-link",
     },
     {
       id: "p6",
       title: "",
+      image: "",
       language: "Java",
-      information: "",
+      description: "",
+      detailedDescription:'',
       link: "github-link",
     },
     {
       id: "p7",
       title: "",
+      image: "",
       language: "Java",
-      information: "",
+      description: "",
+      detailedDescription:'',
       link: "github-link",
     },
   ];
 
+  const openModalHandler = (id) => {
+    const project = projects.find((project) => project.id === id);
+    setModalContent({
+      title: project.title,
+      image: project.image,
+      language: project.language,
+      detailedDescription: project.detailedDescription,
+      link: project.link,
+    });
+    setShowModal(true);
+  };
+
+  const closeModalHandler = () => {
+    setShowModal(false);
+  };
+
   return (
     <div className={classes.projects__container}>
+      {showModal && (
+        <ProjectDetailPage
+          title={modalContent.title}
+          image={modalContent.image}
+          language={modalContent.language}
+          description={modalContent.detailedDescription}
+          link={modalContent.link}
+          onClose={closeModalHandler}
+        />
+      )}
       {projects.map((obj) => (
         <Project
-            key={obj.id}
-            id={obj.id}
-            title={obj.title}
-            language={obj.language}
-            information={obj.information}
-            link={obj.link}
+          key={obj.id}
+          id={obj.id}
+          title={obj.title}
+          language={obj.language}
+          description={obj.description}
+          link={obj.link}
+          openModal={openModalHandler.bind(null, obj.id)}
         />
       ))}
     </div>
