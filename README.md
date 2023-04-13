@@ -7,10 +7,10 @@ In this project I've built a React based Portfolio website, which should show my
 I've build this project for two main reasons:
 
 1. **Build a good foundation in React.js.**    
-At the moment I'm trying to wrap my head around the main concepts and design patterns in React and CSS to build nice and interactive websites with a nice user experience.
+At the moment I'm trying to wrap my head around the main concepts and design patterns in React and CSS to build nice and interactive websites with a nice user experience. I thought that this is a great project, because you are able to use all kinds of React Hooks, custom components and more built-in feautures.
 
 2. **Create a well structured space for recruiters and other developers to get in touch with my recent work.**    
 Nowadays it's quite important to present yourself in a good manner and what's better than a personal website, which you've built on your own 
-to show of your programming skills. Furthermore it is as important as my last point, that you have all your information, social media links and projects at a single space for time efficiency as well as convenience. 
+to show of your programming skills. Furthermore it is as important as my last point, that you have all your information, social media links and projects at a single space for time efficiency as well as for convenience. 
 
 **I hope you enjoy it!**
