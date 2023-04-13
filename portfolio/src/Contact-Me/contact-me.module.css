@@ -51,9 +51,6 @@
 
     grid-row-gap: 1.3rem;
     grid-column-gap: 0.3rem;
-
-
-
 }
 
 input,textarea{
@@ -100,7 +97,6 @@ input {
 }
 
 @media (min-width:60rem){
-
     .contact-me__container{
         width: 100%;
         display: flex;
@@ -108,12 +104,16 @@ input {
         justify-content: center;
         align-items: center;
     }
+
+
+    .page__title{
+        font-size: 1.5rem;
+    }
+    
     
     .form__container{
-        width: 25rem ;
+        width: 15rem ;
         height: fit-content;
-
-        
     
         display: flex;
         flex-direction: column;
@@ -122,20 +122,15 @@ input {
     
     }
     
-    .page__title{
-        font-size: 5rem;
     
-    }
     
     .contact-me__form{
         width: 100%;
-        grid-template-columns: repeat(4,23rem);
+        grid-template-columns: repeat(4,8rem);
 
-        grid-template-rows: repeat(3, 2rem) 12rem;
+        grid-template-rows: repeat(3, 1rem) 12rem;
 
-        
-    
-        grid-row-gap: 4rem;
+        grid-row-gap: 2rem;
         grid-column-gap: 1.3rem;
     
     }
@@ -143,21 +138,22 @@ input {
     
 
     input{
-        height: 4rem;
+        height: 2rem;
+        font-size: 0.8rem;
     }
 
     .email,
     .subject,
     .name{
-        height: 4rem;
+        height: 2rem;
     }
     
     .message{
-        height:20rem;
+        height:15rem;
     }
 
     ::placeholder{
-        font-size: 2rem;
+        font-size: 0.8rem;
     }
 }
 

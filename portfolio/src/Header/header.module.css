@@ -78,17 +78,17 @@ a.active{
     }
     
     .nav-bar__title{
-        font-size: larger;
+        font-size: 0.6rem;
     }
     
     .nav-bar__item{
-        font-size: 1.8rem;
+        font-size: 0.8rem;
     }
     
     
     
     a.active{
-        font-size: 2rem;  
+        font-size: 0.8rem;  
         border-bottom: 2px white solid;
         color: whitesmoke;
     }

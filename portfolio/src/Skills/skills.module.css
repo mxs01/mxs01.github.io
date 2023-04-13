@@ -1,11 +1,12 @@
 .skills__container{
-    height: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 
     margin-top: 2rem;
+    margin-bottom: 6rem;
 
     font-family: var(--fontFamily);
 }
@@ -29,12 +30,12 @@
 
 @media (min-width:60rem){
     .skills__container{
-        width: 40rem;
+        width: 20rem;
         height: 100%;
     }
 
     .skills__title{
-        font-size: 3rem;
+        font-size: 1.5rem;
     }
     
     .skills__element__container{

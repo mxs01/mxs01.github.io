@@ -82,7 +82,7 @@
 @media (min-width:60rem) {
     .projectDetail__container{
         width: 100%;
-        height: 80%;
+        height: 70%;
         margin-top: 10rem;
          
     }
@@ -101,8 +101,8 @@
     
     
     .projectDetailTitle{
-        width: 45rem;
-        font-size: 4rem;
+        width: 40rem;
+        font-size: 2rem;
         color: whitesmoke;
         font-variant: small-caps;
         
@@ -116,28 +116,28 @@
     
     .projectDetailImage__container{
         width: 40rem;
-        height: 27rem;
+        height: 14rem;
     
     }
     
     .projectDetailImage{
         width: 100%;
         height: 100%;
-        font-size: 3rem;
+        font-size: 1rem;
         color: whitesmoke;
     
     }
     
     .projectDetailDescription__container{
         width: 40rem;
-        height: 27rem;
+        height: 10rem;
     
     }
     
     .projectDetailDescription{
         width: 100%;
         height: 80%;
-        font-size: 2rem;
+        font-size: 1.2rem;
         color: whitesmoke;
     }
     

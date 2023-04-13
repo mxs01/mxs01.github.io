@@ -74,14 +74,19 @@
 
 @media (min-width:60rem){
     .project__container{
-        width: 45rem;
-        height: 22rem;
+        width: 22rem;
+        height: 16rem;
+
+        
 
         margin: 3rem 3rem;
     }
     
     .project__title{
-        width: 85%;
+        width: 50%;
+        grid-row: 1/2;
+        text-align: center;
+        font-size: 1rem;
     }
     
 
@@ -91,7 +96,9 @@
     }
     
     .project__information{
-        font-size: 1.3rem;
+        font-size: 0.7rem;
+        grid-template-columns: 7rem 25rem;
+        vertical-align: middle;
         
     }
 }

@@ -69,13 +69,29 @@
     }
 
     .impressum__title{
-        font-size: 5rem;  
+        font-size: 2rem;  
     }
     
     
     .impressum__text__container{
         width: 60%;
-        margin-bottom: 0;
+        height: 100%;
+        margin-bottom: 4rem;
+    }
+
+    .contact-me__link{
+        color: whitesmoke;
+        text-decoration: none;
+    
+        border-radius: 10px;
+        padding:3px;
+        border: 2px whitesmoke solid;
+        margin-bottom: 15px;
+    }
+
+    .impressum__text{
+        font-size: 1.0rem;    
+        line-height: 1.8rem;
     }
 
 
