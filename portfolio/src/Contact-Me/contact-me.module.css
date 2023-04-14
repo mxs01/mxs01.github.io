@@ -46,10 +46,10 @@
 
 
     display: grid;
-    grid-template-columns: repeat(4,7rem);
-    grid-template-rows: repeat(3, 2rem) 7rem;
+    grid-template-columns: repeat(4,3rem);
+    grid-template-rows: repeat(3, 2rem) 4rem;
 
-    grid-row-gap: 1.3rem;
+    grid-row-gap: 0.7rem;
     grid-column-gap: 0.3rem;
 }
 
@@ -62,7 +62,7 @@ input,textarea{
 
 input {
    
-    height: 2.4rem;
+    height: 1.8rem;
 }
 
 

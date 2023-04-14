@@ -11,6 +11,8 @@ const Homepage = () => {
     const firstLine = 'Hi I\'m Max,'.split('');
     const secondLine = 'a computer science bachelor student,'.split('');
     const thridLine = 'with a passion for algorithms and coding.'.split('');
+
+    
     
     
 

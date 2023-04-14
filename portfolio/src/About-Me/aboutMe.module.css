@@ -29,8 +29,8 @@
 }
 
 .aboutMe__info {
-  width: 50%;
-  font-size: 1.7rem;
+  width: 90%;
+  font-size: 0.7rem;
   color: var(--pinkColor);
 }
 
@@ -68,7 +68,7 @@
     font-size: 1.3rem;
     color: var(--pinkColor);
 
-    font-size: 1.3rem;
+    font-size: 2rem;
 
  
   }
