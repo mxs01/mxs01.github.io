@@ -1,0 +1,24 @@
+.page__container{
+    width: 100%;
+    height: 100%;
+    background-color: var(--backgroundColor);
+    color: var(--pinkColor);
+    font-family: var(--fontFamily);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--pinkColor);
+}
+
+.page__title{
+    font-size: 1rem;
+}
+
+
+
+@media (min-width::60rem){
+
+}
