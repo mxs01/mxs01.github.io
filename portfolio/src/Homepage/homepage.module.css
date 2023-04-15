@@ -1,7 +1,7 @@
 .homepage__main__container{
     color: var(--pinkColor);
     width: 100%;
-    height: 100%;
+    height: 80%;
     margin: 0;
     padding-top: 10px;
 
@@ -14,18 +14,20 @@
 
 .homepage__content {
     width: 80%;
-    height: 100%;
-    font-size: 2.2rem;
+    height: 50%;
+    font-size: 1.5rem;
     font-weight: bold;
     font-family: var(--fontFamily);
     margin: 0;
-    justify-content: center; 
 
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
+    align-items: center;
+}
 
+.letters__container{
+    width: 100%;
+    
 }
 
 @media (min-width: 60rem){
@@ -34,6 +36,6 @@
     }
     
     .homepage__content {
-        font-size: 3.5rem;
+        font-size: 2.7rem;
     }
 }

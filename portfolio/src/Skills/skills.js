@@ -8,7 +8,7 @@ const Skills = () => {
                     {language:'Python', level:'Intermediate'}, 
                     {language:'React', level:'Intermediate'},
                     {language:'CSS3', level:'Intermediate'},
-                    {language:'Git', level:'Beginner'}]
+                    {language:'Git', level:'Intermediate'}]
 
     return (
     <div className={classes.skills__container}>

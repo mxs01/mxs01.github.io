@@ -1,30 +1,55 @@
-import classes from './homepage.module.css'
-import AnimateLetters from '../Animation/AnimatedLetters/animatedLetters';
+import classes from "./homepage.module.css";
+import AnimatedLetters, {
+  createAnimatedLetter,
+} from "../Animation/AnimatedLetters/animatedLetters";
 
-import {useEffect, useState} from 'react'
-import { ClassNames } from '@emotion/react';
+import { useEffect, useState } from "react";
+import { ClassNames } from "@emotion/react";
 
 const Homepage = () => {
+  const letterClass = useState("text-animate")[0];
 
-    const letterClass = useState('text-animate')[0];
+  const firstLine = ["Hi", " ", "I'm", " ", "Max,"];
+  const secondLine = [
+    "a",
+    " ",
+    "computer",
+    " ",
+    "science",
+    " ",
+    "bachelor",
+    " ",
+    "student,",
+  ];
+  const thridLine = [
+    "with",
+    " ",
+    "a",
+    " ",
+    "passion",
+    " ",
+    "for",
+    " ",
+    "algorithms",
+    " ",
+    "and",
+    " ",
+    "coding.",
+  ];
 
-    const firstLine = 'Hi I\'m Max,'.split('');
-    const secondLine = 'a computer science bachelor student,'.split('');
-    const thridLine = 'with a passion for algorithms and coding.'.split('');
-
-    
-    
-    
-
-
-    return (
+  return (
     <div className={classes.homepage__main__container}>
-        <div className={classes.homepage__content}>
-            <AnimateLetters letterClass={letterClass} strArray={firstLine} index={4}/>
-            <AnimateLetters letterClass={letterClass} strArray={secondLine} index={20}/>
-            <AnimateLetters letterClass={letterClass} strArray={thridLine} index={60}/>
+      <div className={classes.homepage__content}>
+        <div className={classes.letters__container}>
+          {createAnimatedLetter(0, firstLine, letterClass)}
+          <br />
+          {createAnimatedLetter(11, secondLine, letterClass)}
+          <br />
+          {createAnimatedLetter(47, thridLine, letterClass)}
         </div>
-    </div>);
-}
+      </div>
+    </div>
+  );
+};
 
 export default Homepage;

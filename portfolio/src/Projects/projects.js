@@ -1,9 +1,10 @@
-import classes from "./projects.module.css";
+import "./projects.scss";
 
 import Project from "../Project/project";
 import { useState } from "react";
 
 import ProjectDetailPage from "../ProjectDetailPage/ProjectDetailPage";
+import NoProjectsAvailable from "../NoProjectsAvailable/NoProjectsAvailable";
 
 const Projects = () => {
   const [showModal, setShowModal] = useState(false);
@@ -15,7 +16,8 @@ const Projects = () => {
     link: "",
   });
 
-  const projects = [
+  const projects = []
+  /*[
     {
       id: "p1",
       title: "A* Search Algorithm",
@@ -80,7 +82,7 @@ const Projects = () => {
       detailedDescription:'',
       link: "github-link",
     },
-  ];
+  ];*/
 
   const openModalHandler = (id) => {
     const project = projects.find((project) => project.id === id);
@@ -99,7 +101,7 @@ const Projects = () => {
   };
 
   return (
-    <div className={classes.projects__container}>
+    <div className={"projects__container"}>
       {showModal && (
         <ProjectDetailPage
           title={modalContent.title}
@@ -110,16 +112,20 @@ const Projects = () => {
           onClose={closeModalHandler}
         />
       )}
+      {projects.length === 0 && <NoProjectsAvailable/>}
       {projects.map((obj) => (
-        <Project
+        <div key={obj.id} className={`animation__container _${obj.id}`}>
+          <Project
           key={obj.id}
           id={obj.id}
+          className = {`_${obj.id}`}
           title={obj.title}
           language={obj.language}
           description={obj.description}
           link={obj.link}
           openModal={openModalHandler.bind(null, obj.id)}
         />
+        </div>
       ))}
     </div>
   );

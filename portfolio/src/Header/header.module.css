@@ -21,7 +21,7 @@
 
 
 .nav-bar__items {
-    width: 50%;
+    width: 60%;
     list-style: none;
 
     display: flex;
@@ -33,7 +33,7 @@
 }
 
 .nav-bar__title{
-    font-size: 0.9rem;
+    font-size: 0.4rem;
     font-variant: small-caps;
     font-weight: bolder;
     font-family: var(--fontFamily);
@@ -45,7 +45,7 @@
 .nav-bar__item{
     font-family: var(--fontFamily);
     font-weight: bold;  
-    font-size: 0.6rem;
+    font-size: 0.5rem;
     padding: 5px 0;
     
 
@@ -56,14 +56,14 @@
 .nav-bar__item:hover{
     padding: 3px 0;
     color: var(--backgroundLightPurple);
-    border-bottom: 2px var(--backgroundLightPurple) solid;
+    border-bottom: 1px var(--backgroundLightPurple) solid;
     
 }
 
 a.active{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: var(--fontFamily);
     font-weight: bold;  
-    font-size: 0.6rem;  
+    font-size: 0.5rem;  
     padding: 3px;
 
     text-decoration: none;

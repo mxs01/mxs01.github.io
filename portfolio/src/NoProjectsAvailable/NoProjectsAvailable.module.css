@@ -1,0 +1,36 @@
+.not__available__container {
+  font-family: var(--fontFamily);
+
+  animation-name: bumpIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+
+  margin-top: 4rem;
+}
+
+.not__available__title {
+  color: var(--pinkColor);
+  font-size: 2rem;
+}
+
+.not__available__text {
+  color: var(--pinkColor);
+  font-size: 1.3rem;
+}
+
+@keyframes bumpIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    transform: scale(120%);
+    opacity: 0.5;
+  }
+  75%{
+      opacity: 0.7;
+  }
+  100% {
+    transform: scale(100%);
+    opacity: 1;
+  }
+}
