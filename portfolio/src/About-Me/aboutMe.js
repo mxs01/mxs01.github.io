@@ -60,6 +60,7 @@ const AboutMe = () => {
     "new",
     " ",
     "things",
+    ",",
     " ",
     "developing",
     " ",

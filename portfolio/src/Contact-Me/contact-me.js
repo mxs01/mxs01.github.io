@@ -63,6 +63,10 @@ const ContactMe = () => {
       .then(
         (result) => {
           alert("Message was sent succesfully!");
+          setNameInput("");
+          setEmailInput("");
+          setSubjectInput("");
+          setMessageInput("");
         },
         (error) => {
           alert("Something went wrong, please try it again!");
@@ -84,6 +88,7 @@ const ContactMe = () => {
             type="text"
             placeholder="name"
             name="name"
+            value={nameInput}
             required
             onChange={nameInputHandler}
           />
@@ -91,6 +96,7 @@ const ContactMe = () => {
             className={classes["email"]}
             type="email"
             name="email"
+            value={emailInput}
             placeholder="email"
             required
             onChange={emailInputHandler}
@@ -100,6 +106,7 @@ const ContactMe = () => {
             type="text"
             placeholder="subject"
             name="subject"
+            value={subjectInput}
             required
             onChange={subjectInputHandler}
           />
@@ -107,6 +114,7 @@ const ContactMe = () => {
             className={classes["message"]}
             placeholder="message"
             name="message"
+            value={messageInput}
             required
             onChange={messageInputHandler}
           />

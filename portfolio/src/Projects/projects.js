@@ -16,73 +16,7 @@ const Projects = () => {
     link: "",
   });
 
-  const projects = []
-  /*[
-    {
-      id: "p1",
-      title: "A* Search Algorithm",
-      image: "",
-      language: "Python",
-      description:"I've implemented a GUI implementation of the classic A* algorithm with user interaction.",
-      detailedDescription:"The user is able to set borders via mouse events and afterwards launch the algorithm with the space button. I've visualized this algorithm to show the decision making of the A* Algorithm.",
-      link: "github-link",
-    },
-    {
-      id: "p2",
-      title: "",
-      image: "",
-      language: "Java",
-      description: "",
-      detailedDescription:'',
-      link: "github-link",
-    },
-    {
-      id: "p3",
-      title: "",
-      image: "",
-      language: "Java",
-      description: "",
-      detailedDescription:'',
-      link: "github-link",
-    },
-
-    {
-      id: "p4",
-      image: "",
-      title: "",
-      language: "Java",
-      description: "",
-      detailedDescription:'',
-      link: "github-link",
-    },
-    {
-      id: "p5",
-      title: "",
-      image: "",
-      language: "Java",
-      description: "",
-      detailedDescription:'',
-      link: "github-link",
-    },
-    {
-      id: "p6",
-      title: "",
-      image: "",
-      language: "Java",
-      description: "",
-      detailedDescription:'',
-      link: "github-link",
-    },
-    {
-      id: "p7",
-      title: "",
-      image: "",
-      language: "Java",
-      description: "",
-      detailedDescription:'',
-      link: "github-link",
-    },
-  ];*/
+  const projects = [];
 
   const openModalHandler = (id) => {
     const project = projects.find((project) => project.id === id);
