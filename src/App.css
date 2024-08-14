@@ -7,3 +7,11 @@
   font-family: Switzer;
   src: url('./fonts/Switzer-Variable.ttf');
 }
+@font-face {
+  font-family: Chillax;
+  src: url('./fonts/Chillax-Variable.ttf');
+}
+@font-face {
+  font-family: Alpino;
+  src: url('./fonts/Alpino-Variable.ttf');
+}

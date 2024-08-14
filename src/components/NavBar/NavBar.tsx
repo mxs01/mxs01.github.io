@@ -15,6 +15,7 @@ export const NavBar = (props: any) => {
         height: "15%",
         position: "fixed",
         left: 0,
+        backgroundColor:"white"
       }}
     >
       <Grid

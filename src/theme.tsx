@@ -15,6 +15,18 @@ const colorTheme = createTheme({
 });
 
 export const overridesTheme = createTheme({
+  typography: {
+    h1: {
+      fontFamily:"Outfit",
+      fontWeight: "bold",
+      fontSize: "4.5rem"
+    },
+    h6: {
+      fontFamily: "Alpino",
+      fontSize: "1.2rem",
+      fontWeight: "400"
+    }
+  },
   components: {
     MuiButton: {
         styleOverrides:{
