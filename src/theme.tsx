@@ -21,6 +21,9 @@ export const overridesTheme = createTheme({
       fontWeight: "bold",
       fontSize: "4.5rem"
     },
+    h4: {
+      fontSize: "1.3rem"
+    },
     h6: {
       fontFamily: "Alpino",
       fontSize: "1.2rem",
