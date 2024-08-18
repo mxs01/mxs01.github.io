@@ -4,15 +4,17 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ThemeProvider } from "@mui/material";
-import { overridesTheme } from "./theme";
+import { overridesTheme, colorTheme } from "./theme";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={overridesTheme}>
-      <App />
+    <ThemeProvider theme={colorTheme}>
+      <ThemeProvider theme={overridesTheme}>
+        <App />
+      </ThemeProvider>
     </ThemeProvider>
   </React.StrictMode>
 );

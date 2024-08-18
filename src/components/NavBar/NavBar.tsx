@@ -1,5 +1,4 @@
-import { Grid, Link, Typography } from "@mui/material";
-import { ButtonComponent } from "../Button/Button";
+import { Button, Grid, Link, Typography } from "@mui/material";
 
 interface INavBarItem {
   children: any;
@@ -10,12 +9,12 @@ export const NavBar = (props: any) => {
     <Grid
       container
       sx={{
-        padding:0,
-        margin:0,
+        padding: 0,
+        margin: 0,
         height: "15%",
-        position: "fixed",
-        left: 0,
-        backgroundColor:"white"
+
+        zIndex: "100",
+        backgroundColor: "white",
       }}
     >
       <Grid
@@ -34,34 +33,43 @@ export const NavBar = (props: any) => {
           variant="h3"
           sx={{
             fontVariant: "small-caps",
-            position:"fixed",
-            left:"30px",
+            justifySelf: "left",
+            // position:"fixed",
+            // left:"30px",
           }}
         >
           Maximilian Schnitt
         </Typography>
       </Grid>
-      <Grid
-        container
-        xs={6}
-        sx={{
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-          justifyContent: "space-evenly",
-        }}
-      >
-        <NavBarItem>
-          <Typography variant="h4"><Link href="#">Skills</Link></Typography>
-        </NavBarItem>
-        <NavBarItem>
-          <Typography variant="h4"><Link href="#">Work</Link></Typography>
-        </NavBarItem>
-        <NavBarItem>
-          <ButtonComponent>
-            <Typography variant="button">Contact</Typography>
-          </ButtonComponent>
-        </NavBarItem>
+      <Grid item xs={6}>
+        <Grid
+          container
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-evenly",
+          }}
+        >
+          <NavBarItem>
+            <Typography variant="h4">
+              <Link href="#work-section">Work</Link>
+            </Typography>
+          </NavBarItem>
+          <NavBarItem>
+            <Button
+              variant="contained"
+              sx={{
+                width: "7rem",
+                height: "3rem",
+                borderRadius: "10px",
+              }}
+              href="#contact-section"
+            >
+              <Typography variant="button">Contact</Typography>
+            </Button>
+          </NavBarItem>
+        </Grid>
       </Grid>
     </Grid>
   );

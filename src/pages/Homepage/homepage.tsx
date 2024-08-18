@@ -1,5 +1,5 @@
 import classes from "./homepage.module.css";
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import { NavBar } from "../../components/NavBar/NavBar";
 
 import profilePicture from "../../images/ProfilePicture.jpeg";
@@ -9,7 +9,9 @@ export const Homepage = (props: any) => {
     <Container
       maxWidth="xl"
       sx={{
-        height: "100vh",
+        width: "80%",
+        height: "70vh",
+        marginBottom:"5rem"
       }}
     >
       <NavBar />
@@ -29,12 +31,14 @@ export const Homepage = (props: any) => {
             marginTop: "6rem",
           }}
         >
-          <Box sx={{
-            display:"flex",
-            flexDirection:"column",
-            justifyContent:"center",
-            alignItems:"left"
-          }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "left",
+            }}
+          >
             <Typography variant="h1" sx={{}}>
               Hi I'm Max,
               <br />
@@ -46,7 +50,8 @@ export const Homepage = (props: any) => {
                 justifyContent: "left",
                 alignItems: "center",
                 width: "60%",
-                gap:"0.8rem",
+                gap: "0.8rem",
+                marginBottom:"20px"
               }}
             >
               <Typography variant="h6">React</Typography>

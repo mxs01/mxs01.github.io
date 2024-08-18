@@ -5,15 +5,17 @@ import { Homepage } from "./pages/Homepage/homepage";
 import { Work } from "./pages/Work/work";
 import { Container } from "@mui/material";
 import { Contact } from "./pages/Contact/Contact";
+import { Footer } from "./components/Footer/Footer";
 
 function App() {
   return (
-    <Container maxWidth="xl" sx={{
+    <Container maxWidth="xl" disableGutters sx={{
 
     }}>
       <Homepage />
       <Work />
       <Contact/>
+      <Footer />
     </Container>
   );
 }

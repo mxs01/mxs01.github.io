@@ -1,23 +1,20 @@
 import {
-  Box,
   Button,
   Container,
   FormControl,
   FormGroup,
-  InputLabel,
   Paper,
   styled,
   TextField,
-  ThemeProvider,
-  Typography,
+  Typography
 } from "@mui/material";
-import { overridesTheme } from "../../theme";
-import { ButtonComponent } from "../../components/Button/Button";
 
 const CssTextField = styled(TextField)({
-  borderRadius: "10px",
+  // borderRadius: "10px",
+  backgroundColor: "#E0E3E7",
   "& label.Mui-focused": {
-    color: "#A0AAB4",
+    color: "white",
+    fontSize:"1rem",
   },
   "& .MuiInput-underline:after": {
     borderBottomColor: "#B2BAC2",
@@ -37,7 +34,7 @@ const CssTextField = styled(TextField)({
 
 export const Contact = (props: any) => {
   return (
-    <Container
+    <Container id="contact-section"
       maxWidth="xl"
       sx={{
         width: "100%",
@@ -80,9 +77,9 @@ export const Contact = (props: any) => {
               <CssTextField
                 label="Name"
                 margin="dense"
-                sx={{ marginRight: "10px" }}
+                sx={{ marginRight: "2%", width: "49%" }}
               />
-              <CssTextField label="E-Mail" margin="dense" />
+              <CssTextField label="E-Mail" margin="dense" sx={{width: "49%"}}/>
             </FormGroup>
             <FormGroup row>
               <CssTextField label="Subject" fullWidth margin="dense" />
