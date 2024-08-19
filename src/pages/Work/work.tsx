@@ -43,7 +43,7 @@ const projects: Project[] = [
 const amountWorkElements:number = 1
 const PAGINATION_NODES = Math.round(projects.length/amountWorkElements)
 
-export const Work = (props: any) => {
+export const Work = () => {
   const [currentPageNumber, setCurrentPageNumber] = useState(1);
   const [displayedPages, setDisplayedPages] = useState([...projects]);
 
@@ -51,8 +51,6 @@ export const Work = (props: any) => {
   useEffect(() => {
     const startIdx = amountWorkElements * (currentPageNumber-1)
     const endIdx = startIdx + amountWorkElements
-
-    console.log(`start index:${startIdx} | end index ${endIdx}`)
     setDisplayedPages(projects.slice(startIdx, endIdx))
 
   }, [currentPageNumber]);
