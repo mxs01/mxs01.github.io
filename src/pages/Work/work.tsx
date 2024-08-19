@@ -1,15 +1,10 @@
 import {
   Box,
-  Container,
   Pagination,
-  ThemeProvider,
-  Typography,
-  useTheme,
+  Typography
 } from "@mui/material";
-import ExamplePicture1 from "../../images/Work/ProjectExample2.jpeg";
-import ExamplePicture2 from "../../images/Work/ProjectExample3.png";
-import { WorkComponent } from "../../components/WorkComponent/WorkComponent";
 import { useEffect, useState } from "react";
+import { WorkComponent } from "../../components/WorkComponent/WorkComponent";
 
 interface Project {
   image: any;

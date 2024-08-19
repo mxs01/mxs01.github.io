@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { Subject } from "@mui/icons-material";
+
 
 export const Contact = (props: any) => {
   const [nameInput, setNameInput] = useState("");

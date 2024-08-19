@@ -1,6 +1,6 @@
-import classes from "./homepage.module.css";
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import { NavBar } from "../../components/NavBar/NavBar";
+import classes from "./homepage.module.css";
 
 import profilePicture from "../../images/ProfilePicture.jpeg";
 
@@ -82,10 +82,11 @@ export const Homepage = (props: any) => {
               alignItems: "center",
             }}
           >
+           
             <img
               id={classes.profilePicture}
               src={profilePicture}
-              alt="Profile Picture"
+              alt="Me"
             ></img>
           </Box>
         </Grid>

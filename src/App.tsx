@@ -1,11 +1,9 @@
-import React from "react";
-import logo from "./logo.svg";
+import { Container } from "@mui/material";
 import "./App.css";
+import { Footer } from "./components/Footer/Footer";
+import { Contact } from "./pages/Contact/Contact";
 import { Homepage } from "./pages/Homepage/homepage";
 import { Work } from "./pages/Work/work";
-import { Container } from "@mui/material";
-import { Contact } from "./pages/Contact/Contact";
-import { Footer } from "./components/Footer/Footer";
 
 function App() {
   return (
