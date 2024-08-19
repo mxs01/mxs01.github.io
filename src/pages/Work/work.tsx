@@ -17,29 +17,7 @@ interface Project {
   content: string;
 }
 
-const projects: Project[] = [
-  {
-    image: ExamplePicture1,
-    title: "Admin Dashboard Application",
-    content: `The Admin Dashboard is a centralized platform for 
-                managing various aspects of a service or system, such as user accounts, content, and performance metrics. It allows administrators to monitor activity, 
-                configure settings, and ensure smooth operation of
-                the platform. The dashboard is designed to provide
-                quick access to essential tools and information for
-                effective system management.`,
-  },
-  {
-    image: ExamplePicture2,
-    title: "Fullstack Online Shop",
-    content: `An online shop project is a web-based platform
-                that allows users to browse, purchase, and manage
-                products, offering features like product search,
-                shopping cart, secure payment processing, and
-                order tracking to create a seamless e-commerce
-                experience.`,
-  },
-];
-
+const projects: Project[] = []
 const amountWorkElements:number = 1
 const PAGINATION_NODES = Math.round(projects.length/amountWorkElements)
 
@@ -78,7 +56,8 @@ export const Work = () => {
       >
         Recent Work
       </Typography>
-      {displayedPages.map((el, idx) => (
+      {projects.length < 0 && <NoProjectsAvailable/>}
+      {projects.length > 0 && displayedPages.map((el, idx) => (
         <WorkComponent
           image={el.image}
           title={el.title}
@@ -87,7 +66,15 @@ export const Work = () => {
           content={el.content}
         />
       ))}
-      <Pagination count={PAGINATION_NODES} color="primary" onChange={(event, value) => setCurrentPageNumber(value)}/>
+      {projects.length > 0 && <Pagination count={PAGINATION_NODES} color="primary" onChange={(event, value) => setCurrentPageNumber(value)}/>}
+
+        
     </Box>
   );
 };
+
+const NoProjectsAvailable = () => {
+  return(<Box>
+    <Typography>No projects available</Typography>
+  </Box>);
+}
