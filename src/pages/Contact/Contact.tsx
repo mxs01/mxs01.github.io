@@ -5,44 +5,55 @@ import {
   FormGroup,
   Paper,
   TextField,
+  Theme,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 
-
 export const Contact = (props: any) => {
+
+  const mobileQuery = useMediaQuery((theme: Theme) =>
+    theme.breakpoints.between("xs", "sm")
+  );
+
   const [nameInput, setNameInput] = useState("");
   const [mailInput, setMailInput] = useState("");
   const [subjectInput, setSubjectInput] = useState("");
   const [contentInput, setContentInput] = useState("");
   const [validEmail, setValidEmail] = useState(true);
 
-  const [buttonDisabled, setButtonDisabled] = useState(false)
+  const [buttonDisabled, setButtonDisabled] = useState(false);
 
   const sendEmail = async (e: any) => {
     e.preventDefault();
-    setButtonDisabled(true)
-    emailjs.send(
-      process.env.REACT_APP_EMAIL_JS_SERVICE_ID ?? "",
-      process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID ?? "",
-      {
-        to_name: process.env.REACT_APP_EMAIL_JS_TO_NAME ?? "",
-        from_name: nameInput,
-        subject: subjectInput,
-        message: contentInput
-      },
-      process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY ?? ""
-    ).then((result)=>{
-      alert("Message was sent succesfully!");
-      setNameInput("")
-      setMailInput("")
-      setSubjectInput("")
-      setContentInput("")
-      setButtonDisabled(false)
-    },(error) =>{
-      alert("Something went wrong, please try it again!");
-    })
+    setButtonDisabled(true);
+    emailjs
+      .send(
+        process.env.REACT_APP_EMAIL_JS_SERVICE_ID ?? "",
+        process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID ?? "",
+        {
+          to_name: process.env.REACT_APP_EMAIL_JS_TO_NAME ?? "",
+          from_name: nameInput,
+          subject: subjectInput,
+          message: contentInput,
+        },
+        process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY ?? ""
+      )
+      .then(
+        (result) => {
+          alert("Message was sent succesfully!");
+          setNameInput("");
+          setMailInput("");
+          setSubjectInput("");
+          setContentInput("");
+          setButtonDisabled(false);
+        },
+        (error) => {
+          alert("Something went wrong, please try it again!");
+        }
+      );
   };
 
   const verifyMail = () => {
@@ -60,7 +71,10 @@ export const Contact = (props: any) => {
       maxWidth="xl"
       sx={{
         width: "100%",
-        height: "70vh",
+        height: {
+          xs: "50vh",
+          sm: "70vh",
+        },
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -83,12 +97,12 @@ export const Contact = (props: any) => {
             color: "white",
             fontFamily: "Outfit",
             fontWeight: "400",
-            marginBottom:"0.8rem"
+            marginBottom: "0.8rem",
           }}
         >
           Contact Me
         </Typography>
-        <form onSubmit={e => sendEmail(e)}>
+        <form onSubmit={(e) => sendEmail(e)}>
           <FormControl
             sx={{
               display: "flex",
@@ -134,7 +148,7 @@ export const Contact = (props: any) => {
               }}
             >
               <TextField
-                rows={5}
+                rows={mobileQuery ? 3 : 5}
                 multiline
                 label="Content"
                 fullWidth
@@ -157,14 +171,17 @@ export const Contact = (props: any) => {
                 type="submit"
                 disabled={buttonDisabled}
                 sx={{
-                  width: "25%",
+                  width: {
+                    xs: "65%",
+                    sm: "25%",
+                  },
                   backgroundColor: "#FFDF68",
                   "&:hover": {
                     backgroundColor: "#FFC107",
                   },
-                  "&:disabled":{
-                    backgroundColor: "#f6f6f6"
-                  }
+                  "&:disabled": {
+                    backgroundColor: "#f6f6f6",
+                  },
                 }}
               >
                 <Typography
