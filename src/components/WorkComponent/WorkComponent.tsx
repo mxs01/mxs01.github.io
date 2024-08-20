@@ -1,5 +1,12 @@
 import classes from "./WorkComponent.module.css";
-import { Box, Grid, Paper, Typography } from "@mui/material";
+import {
+  Box,
+  Grid,
+  Paper,
+  Theme,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 
 interface IWorkComp {
   image: any;
@@ -17,10 +24,13 @@ export const WorkComponent = (props: IWorkComp) => {
     <Paper
       elevation={3}
       sx={{
-        width: "60%",
+        width: "70%",
         height: "20rem",
         backgroundColor: "#3E5C76",
         marginBottom: "1rem",
+        padding: {
+          xs: "1rem",
+        },
       }}
     >
       <Box
@@ -31,38 +41,61 @@ export const WorkComponent = (props: IWorkComp) => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          padding:"0.4rem",
+          padding: "0.4rem",
         }}
       >
-        <Typography variant="h4" sx={{
-            fontSize:"1.7rem",
+        <Typography
+          variant="h4"
+          sx={{
             fontWeight: "600",
-            fontFamily: "Outfit",
-            color:"white",
-            letterSpacing:"0.2rem",
-
-        }}>{props.title}</Typography>
+            color: "white",
+            letterSpacing: "0.2rem",
+          }}
+        >
+          {props.title}
+        </Typography>
       </Box>
       <Grid
         container
         sx={{
           width: "100%",
-          height: "90%",
+          height: {
+            xs: "45%",
+            sm: "90%",
+          },
         }}
       >
-        <Grid item xs={6} sx={{
+        <Grid
+          item
+          sm={6}
+          xs={12}
+          sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-        }}>
+            order: {
+              xs: props.even ? 1 : 2,
+              sm: 1,
+            },
+          }}
+        >
           {props.even && <ImageComp image={props.image} />}
           {!props.even && <TextComp content={props.content} />}
         </Grid>
-        <Grid item xs={6} sx={{
+        <Grid
+          item
+          sm={6}
+          xs={12}
+          sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-        }}>
+            order: {
+              xs: props.even ? 2 : 1,
+              sm: 1,
+            },
+          }}
+        >
           {props.even && <TextComp content={props.content} />}
           {!props.even && <ImageComp image={props.image} />}
         </Grid>
@@ -75,8 +108,21 @@ const ImageComp = (props: IImageComp) => {
   return (
     <Box
       sx={{
-        width: "100%",
-        height: "100%",
+        maxHeight: {
+          xs: "85%",
+          sm: "100%",
+        },
+        maxWidth: {
+          xs: "85%",
+          sm: "100%",
+        },
+
+        width:{
+          xs:"auto"
+        },
+        height:{
+          xs:"auto"
+        },
         overflow: "hidden",
         display: "flex",
         justifyContent: "center",
@@ -115,3 +161,4 @@ const TextComp = (props: ITextComp) => {
     </Box>
   );
 };
+
