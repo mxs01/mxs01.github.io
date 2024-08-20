@@ -23,19 +23,93 @@ export const overridesTheme = (outerTheme:Theme) => createTheme({
     h1: {
       fontFamily: "Outfit",
       fontWeight: "bold",
-      fontSize: "3.5rem",
+      [outerTheme.breakpoints.between('xs', "sm")]: {
+        fontSize: "1.2rem",
+      },
+      [outerTheme.breakpoints.up('sm')]: {
+        fontSize: "1.7rem",
+      },
+      [outerTheme.breakpoints.up('lg')]: {
+        fontSize: "2.5rem",
+      },
+      [outerTheme.breakpoints.up('xl')]: {
+        fontSize: "3.5rem",
+      },
+    },
+    h3: {
+      [outerTheme.breakpoints.between('xs', "sm")]: {
+        fontSize: "1.2rem",
+      },
+      [outerTheme.breakpoints.up('sm')]: {
+        fontSize: "1.5rem",
+      },
+      [outerTheme.breakpoints.up('lg')]: {
+        fontSize: "1.8rem",
+      },
+      [outerTheme.breakpoints.up('xl')]: {
+        fontSize: "2rem",
+      },
     },
     h4: {
-      fontSize: "1.3rem",
+      [outerTheme.breakpoints.between('xs', "sm")]: {
+        fontSize: "1rem",
+      },
+      [outerTheme.breakpoints.up('sm')]: {
+        fontSize: "1.2rem",
+      },
+      [outerTheme.breakpoints.up('lg')]: {
+        fontSize: "1.4rem",
+      },
+      [outerTheme.breakpoints.up('xl')]: {
+        fontSize: "1.6rem",
+      },
     },
     h6: {
       fontFamily: "Alpino",
-      fontSize: "1.2rem",
       fontWeight: "400",
+      fontSize: "1.2rem",
+      [outerTheme.breakpoints.between('xs', "sm")]: {
+        fontSize: "0.8rem",
+      },
+      [outerTheme.breakpoints.up('sm')]: {
+        fontSize: "1rem",
+      },
+      [outerTheme.breakpoints.up('lg')]: {
+        fontSize: "1.2rem",
+      },
+      [outerTheme.breakpoints.up('xl')]: {
+        fontSize: "1.4rem",
+      },
     },
     button: {
       letterSpacing: "0.2rem",
+      [outerTheme.breakpoints.between('xs', "sm")]: {
+        fontSize: "0.6rem",
+      },
+      [outerTheme.breakpoints.up('sm')]: {
+        fontSize: "0.8rem",
+      },
+      [outerTheme.breakpoints.up('lg')]: {
+        fontSize: "1.0rem",
+      },
+      [outerTheme.breakpoints.up('xl')]: {
+        fontSize: "1.1rem",
+      },
     },
+    body1:{
+      [outerTheme.breakpoints.between('xs', "sm")]: {
+        fontSize: "0.6rem",
+      },
+      [outerTheme.breakpoints.up('sm')]: {
+        fontSize: "0.8rem",
+      },
+      [outerTheme.breakpoints.up('lg')]: {
+        fontSize: "1.0rem",
+      },
+      [outerTheme.breakpoints.up('xl')]: {
+        fontSize: "1.1rem",
+      },
+    }
   },
   components: {
     MuiButton: {
