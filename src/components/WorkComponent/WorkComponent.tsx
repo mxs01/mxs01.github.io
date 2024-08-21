@@ -1,12 +1,10 @@
-import classes from "./WorkComponent.module.css";
 import {
   Box,
   Grid,
   Paper,
-  Theme,
   Typography,
-  useMediaQuery,
-} from "@mui/material";
+} from '@mui/material';
+import classes from './WorkComponent.module.css';
 
 interface IWorkComp {
   image: any;
@@ -15,41 +13,41 @@ interface IWorkComp {
   even: boolean;
 }
 
-type IImageComp = Pick<IWorkComp, "image">;
+type IImageComp = Pick<IWorkComp, 'image'>;
 
-type ITextComp = Pick<IWorkComp, "content">;
+type ITextComp = Pick<IWorkComp, 'content'>;
 
 export const WorkComponent = (props: IWorkComp) => {
   return (
     <Paper
       elevation={3}
       sx={{
-        width: "70%",
-        height: "20rem",
-        backgroundColor: "#3E5C76",
-        marginBottom: "1rem",
+        width: '70%',
+        height: '20rem',
+        backgroundColor: '#3E5C76',
+        marginBottom: '1rem',
         padding: {
-          xs: "1rem",
+          xs: '1rem',
         },
       }}
     >
       <Box
         sx={{
-          width: "100%",
-          height: "10%",
-          textAlign: "center",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          padding: "0.4rem",
+          width: '100%',
+          height: '10%',
+          textAlign: 'center',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '0.4rem',
         }}
       >
         <Typography
           variant="h4"
           sx={{
-            fontWeight: "600",
-            color: "white",
-            letterSpacing: "0.2rem",
+            fontWeight: '600',
+            color: 'white',
+            letterSpacing: '0.2rem',
           }}
         >
           {props.title}
@@ -58,10 +56,10 @@ export const WorkComponent = (props: IWorkComp) => {
       <Grid
         container
         sx={{
-          width: "100%",
+          width: '100%',
           height: {
-            xs: "45%",
-            sm: "90%",
+            xs: '45%',
+            sm: '90%',
           },
         }}
       >
@@ -70,9 +68,9 @@ export const WorkComponent = (props: IWorkComp) => {
           sm={6}
           xs={12}
           sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
             order: {
               xs: props.even ? 1 : 2,
               sm: 1,
@@ -87,9 +85,9 @@ export const WorkComponent = (props: IWorkComp) => {
           sm={6}
           xs={12}
           sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
             order: {
               xs: props.even ? 2 : 1,
               sm: 1,
@@ -109,24 +107,24 @@ const ImageComp = (props: IImageComp) => {
     <Box
       sx={{
         maxHeight: {
-          xs: "85%",
-          sm: "100%",
+          xs: '85%',
+          sm: '100%',
         },
         maxWidth: {
-          xs: "85%",
-          sm: "100%",
+          xs: '85%',
+          sm: '100%',
         },
 
         width:{
-          xs:"auto"
+          xs:'auto',
         },
         height:{
-          xs:"auto"
+          xs:'auto',
         },
-        overflow: "hidden",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
+        overflow: 'hidden',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
       <img id={classes.image} src={props.image} alt="Work Image"></img>
@@ -138,22 +136,22 @@ const TextComp = (props: ITextComp) => {
   return (
     <Box
       sx={{
-        width: "90%",
-        height: "100%%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        color: "white",
+        width: '90%',
+        height: '100%%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        color: 'white',
       }}
     >
       <Typography
         variant="body1"
         sx={{
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
+          width: '100%',
+          height: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
         }}
       >
         {props.content}

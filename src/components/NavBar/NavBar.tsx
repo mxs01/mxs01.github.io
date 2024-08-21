@@ -1,11 +1,11 @@
-import { Button, Grid, Link, Typography } from "@mui/material";
+import { Button, Grid, Link, Typography } from '@mui/material';
 
 interface INavBarItem {
   children: any;
   xs:number
 }
 
-export const NavBar = (props: any) => {
+export const NavBar = () => {
   return (
     <Grid
       container
@@ -13,35 +13,35 @@ export const NavBar = (props: any) => {
         padding: 0,
         margin: 0,
         marginTop: {
-          xs: "1rem",
+          xs: '1rem',
         },
         marginBottom: {
-          xs: "2rem",
+          xs: '2rem',
         },
-        height: "15%",
+        height: '15%',
 
-        zIndex: "100",
-        backgroundColor: "white",
+        zIndex: '100',
+        backgroundColor: 'white',
       }}
     >
       <Grid
         item
         xs={6}
         sx={{
-          height: "100%",
+          height: '100%',
           padding: 0,
           margin: 0,
-          textAlign: "left",
-          display: "flex",
-          alignItems: "center",
+          textAlign: 'left',
+          display: 'flex',
+          alignItems: 'center',
         }}
       >
         <Typography
           variant="h3"
           sx={{
-            fontVariant: "small-caps",
-            justifySelf: "left",
-            marginLeft:"30px"
+            fontVariant: 'small-caps',
+            justifySelf: 'left',
+            marginLeft:'30px',
           }}
         >
           Maximilian Schnitt
@@ -51,10 +51,10 @@ export const NavBar = (props: any) => {
         <Grid
           container
           sx={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "space-evenly",
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-evenly',
           }}
         >
           <NavBarItem xs={4}>
@@ -67,21 +67,21 @@ export const NavBar = (props: any) => {
               variant="contained"
               sx={{
                 width: {
-                  xs: "6rem",
-                  sm: "7rem",
+                  xs: '6rem',
+                  sm: '7rem',
                 },
                 height: {
-                  xs: "1.7rem",
-                  sm: "3rem",
+                  xs: '1.7rem',
+                  sm: '3rem',
                 },
-                borderRadius: "10px",
+                borderRadius: '10px',
               }}
               href="#contact-section"
             >
               <Typography
                 variant="button"
                 sx={{
-                  fontSize: "0.1rem",
+                  fontSize: '0.1rem',
                 }}
               >
                 Contact
@@ -102,10 +102,10 @@ const NavBarItem = (props: INavBarItem) => {
       sx={{
         padding: 0,
         margin: 0,
-        height: "100%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
+        height: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
       {props.children}

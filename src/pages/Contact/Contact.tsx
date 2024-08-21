@@ -1,7 +1,7 @@
+import emailjs from '@emailjs/browser';
 import {
   Box,
   Button,
-  Container,
   FormControl,
   FormGroup,
   Paper,
@@ -9,19 +9,18 @@ import {
   Theme,
   Typography,
   useMediaQuery,
-} from "@mui/material";
-import { useState } from "react";
-import emailjs from "@emailjs/browser";
+} from '@mui/material';
+import { useState } from 'react';
 
-export const Contact = (props: any) => {
+export const Contact = () => {
   const mobileQuery = useMediaQuery((theme: Theme) =>
-    theme.breakpoints.between("xs", "sm")
+    theme.breakpoints.between('xs', 'sm'),
   );
 
-  const [nameInput, setNameInput] = useState("");
-  const [mailInput, setMailInput] = useState("");
-  const [subjectInput, setSubjectInput] = useState("");
-  const [contentInput, setContentInput] = useState("");
+  const [nameInput, setNameInput] = useState('');
+  const [mailInput, setMailInput] = useState('');
+  const [subjectInput, setSubjectInput] = useState('');
+  const [contentInput, setContentInput] = useState('');
   const [validEmail, setValidEmail] = useState(true);
 
   const [buttonDisabled, setButtonDisabled] = useState(false);
@@ -31,80 +30,80 @@ export const Contact = (props: any) => {
     setButtonDisabled(true);
     emailjs
       .send(
-        process.env.REACT_APP_EMAIL_JS_SERVICE_ID ?? "",
-        process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID ?? "",
+        process.env.REACT_APP_EMAIL_JS_SERVICE_ID ?? '',
+        process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID ?? '',
         {
-          to_name: process.env.REACT_APP_EMAIL_JS_TO_NAME ?? "",
+          to_name: process.env.REACT_APP_EMAIL_JS_TO_NAME ?? '',
           from_name: nameInput,
           subject: subjectInput,
           message: contentInput,
         },
-        process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY ?? ""
+        process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY ?? '',
       )
       .then(
-        (result) => {
-          alert("Message was sent succesfully!");
-          setNameInput("");
-          setMailInput("");
-          setSubjectInput("");
-          setContentInput("");
+        () => {
+          alert('Message was sent succesfully!');
+          setNameInput('');
+          setMailInput('');
+          setSubjectInput('');
+          setContentInput('');
           setButtonDisabled(false);
         },
-        (error) => {
-          alert("Something went wrong, please try it again!");
-        }
+        () => {
+          alert('Something went wrong, please try it again!');
+        },
       );
   };
 
   const verifyMail = () => {
-    if (mailInput.trim() === "") {
+    if (mailInput.trim() === '') {
       setValidEmail(true);
     } else {
-      const reg = new RegExp("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.(com|de|fr)");
+      const reg = new RegExp('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.(com|de|fr)');
       setValidEmail(reg.test(mailInput));
     }
   };
 
   return (
     <Box
-      id="contact-section"
+      id='contact-section'
       sx={{
-        width: "100%",
+        width: '100%',
         height: {
-          xs: "35vh",
-          sm: "50vh",
+          xs: '35vh',
+          sm: '50vh',
         },
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
       <Paper
         elevation={3}
         sx={{
           width: {
-            xs: "70%",
-            sm:"60%"},
+            xs: '70%',
+            sm:'60%'},
           height: {
-            xs: "fit-content",
-            sm: "fit-content",
+            xs: 'fit-content',
+            sm: 'fit-content',
           },
-          backgroundColor: "#3C5D76",
+          backgroundColor: '#3C5D76',
           padding: {
-            xs: "1rem",
-            sm: "2rem",
+            xs: '1rem',
+            sm: '2rem',
           },
         }}
       >
         <Typography
-          variant="h3"
-          textAlign={"center"}
+          variant='h3'
+          textAlign={'center'}
           sx={{
-            padding: "0.5rem",
-            color: "white",
-            fontFamily: "Outfit",
-            fontWeight: "400",
-            marginBottom: "0.8rem",
+            padding: '0.5rem',
+            color: 'white',
+            fontFamily: 'Outfit',
+            fontWeight: '400',
+            marginBottom: '0.8rem',
           }}
         >
           Contact Me
@@ -112,32 +111,32 @@ export const Contact = (props: any) => {
         <form onSubmit={(e) => sendEmail(e)}>
           <FormControl
             sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "left",
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'left',
             }}
           >
             <FormGroup row>
               <TextField
-                label="Name"
-                margin="dense"
+                label='Name'
+                margin='dense'
                 sx={{
-                  marginRight: "2%",
-                  width: "49%",
+                  marginRight: '2%',
+                  width: '49%',
                 }}
                 value={nameInput}
                 onChange={(e) => setNameInput(e.target.value)}
                 required
               />
               <TextField
-                label="E-Mail"
-                margin="dense"
+                label='E-Mail'
+                margin='dense'
                 sx={{
-                  width: "49%",
+                  width: '49%',
                 }}
                 error={!validEmail}
                 required
-                helperText={!validEmail && "Incorrect email adress."}
+                helperText={!validEmail && 'Incorrect email adress.'}
                 onBlur={verifyMail}
                 value={mailInput}
                 onChange={(e) => setMailInput(e.target.value)}
@@ -145,9 +144,9 @@ export const Contact = (props: any) => {
             </FormGroup>
             <FormGroup row>
               <TextField
-                label="Subject"
+                label='Subject'
                 fullWidth
-                margin="dense"
+                margin='dense'
                 value={subjectInput}
                 onChange={(e) => setSubjectInput(e.target.value)}
                 required
@@ -156,15 +155,15 @@ export const Contact = (props: any) => {
             <FormGroup
               row
               sx={{
-                marginBottom: "1.3rem",
+                marginBottom: '1.3rem',
               }}
             >
               <TextField
                 rows={mobileQuery ? 3 : 5}
                 multiline
-                label="Content"
+                label='Content'
                 fullWidth
-                margin="dense"
+                margin='dense'
                 value={contentInput}
                 onChange={(e) => setContentInput(e.target.value)}
                 required
@@ -173,36 +172,36 @@ export const Contact = (props: any) => {
             <FormGroup
               row
               sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
               }}
             >
               <Button
-                type="submit"
+                type='submit'
                 disabled={buttonDisabled}
                 sx={{
                   width: {
-                    xs: "10rem",
-                    sm: "11rem",
+                    xs: '10rem',
+                    sm: '11rem',
                   },
                   height: {
-                    xs: "2rem",
+                    xs: '2rem',
                   },
-                  backgroundColor: "#FFDF68",
-                  "&:hover": {
-                    backgroundColor: "#FFC107",
+                  backgroundColor: '#FFDF68',
+                  '&:hover': {
+                    backgroundColor: '#FFC107',
                   },
-                  "&:disabled": {
-                    backgroundColor: "#f6f6f6",
+                  '&:disabled': {
+                    backgroundColor: '#f6f6f6',
                   },
                 }}
               >
                 <Typography
-                  variant="button"
+                  variant='button'
                   sx={{
-                    color: "black",
-                    letterSpacing: "0.2rem",
+                    color: 'black',
+                    letterSpacing: '0.2rem',
                   }}
                 >
                   Contact Me
