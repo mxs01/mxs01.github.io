@@ -11,6 +11,10 @@ export const NavBar = (props: any) => {
       sx={{
         padding: 0,
         margin: 0,
+        marginBottom:{
+          xs:"2rem"
+        
+        },
         height: "15%",
 
         zIndex: "100",
@@ -60,13 +64,19 @@ export const NavBar = (props: any) => {
             <Button
               variant="contained"
               sx={{
-                width: "7rem",
-                height: "3rem",
+                width: {
+                  xs:"12rem",
+                  sm:"7rem"},
+                height: {
+                  xs:"1.7rem",
+                  sm:"3rem"},
                 borderRadius: "10px",
               }}
               href="#contact-section"
             >
-              <Typography variant="button">Contact</Typography>
+              <Typography variant="button" sx={{
+                fontSize:"0.4rem"
+              }}>Contact</Typography>
             </Button>
           </NavBarItem>
         </Grid>

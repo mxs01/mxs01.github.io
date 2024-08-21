@@ -13,7 +13,6 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 
 export const Contact = (props: any) => {
-
   const mobileQuery = useMediaQuery((theme: Theme) =>
     theme.breakpoints.between("xs", "sm")
   );
@@ -84,9 +83,15 @@ export const Contact = (props: any) => {
         elevation={3}
         sx={{
           width: "60%",
-          height: "80%",
+          height: {
+            xs: "65%",
+            sm: "80%",
+          },
           backgroundColor: "#3C5D76",
-          padding: "2rem",
+          padding: {
+            xs: "1rem",
+            sm: "2rem",
+          },
         }}
       >
         <Typography
@@ -114,7 +119,10 @@ export const Contact = (props: any) => {
               <TextField
                 label="Name"
                 margin="dense"
-                sx={{ marginRight: "2%", width: "49%" }}
+                sx={{
+                  marginRight: "2%",
+                  width: "49%",
+                }}
                 value={nameInput}
                 onChange={(e) => setNameInput(e.target.value)}
                 required
@@ -122,7 +130,9 @@ export const Contact = (props: any) => {
               <TextField
                 label="E-Mail"
                 margin="dense"
-                sx={{ width: "49%" }}
+                sx={{
+                  width: "49%",
+                }}
                 error={!validEmail}
                 required
                 helperText={!validEmail && "Incorrect email adress."}
@@ -167,13 +177,15 @@ export const Contact = (props: any) => {
               }}
             >
               <Button
-                size="large"
                 type="submit"
                 disabled={buttonDisabled}
                 sx={{
                   width: {
-                    xs: "65%",
+                    xs: "8rem",
                     sm: "25%",
+                  },
+                  height: {
+                    xs: "2rem",
                   },
                   backgroundColor: "#FFDF68",
                   "&:hover": {

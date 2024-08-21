@@ -24,12 +24,11 @@ export const Homepage = (props: any) => {
         },
       }}
     >
-      <NavBar/>
       <Grid
         container
         sx={{
           height: {
-            xs: "20%",
+            xs: "fit-content",
             xl: "80%",
           },
         }}
@@ -54,6 +53,9 @@ export const Homepage = (props: any) => {
         >
           <Box
             sx={{
+              height:{
+                xs:"60%"
+              },
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
