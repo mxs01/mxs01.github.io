@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Container,
   FormControl,
@@ -65,14 +66,13 @@ export const Contact = (props: any) => {
   };
 
   return (
-    <Container
+    <Box
       id="contact-section"
-      maxWidth="xl"
       sx={{
         width: "100%",
         height: {
-          xs: "50vh",
-          sm: "70vh",
+          xs: "35vh",
+          sm: "50vh",
         },
         display: "flex",
         justifyContent: "center",
@@ -82,10 +82,12 @@ export const Contact = (props: any) => {
       <Paper
         elevation={3}
         sx={{
-          width: "60%",
+          width: {
+            xs: "70%",
+            sm:"60%"},
           height: {
-            xs: "65%",
-            sm: "80%",
+            xs: "fit-content",
+            sm: "fit-content",
           },
           backgroundColor: "#3C5D76",
           padding: {
@@ -181,8 +183,8 @@ export const Contact = (props: any) => {
                 disabled={buttonDisabled}
                 sx={{
                   width: {
-                    xs: "8rem",
-                    sm: "25%",
+                    xs: "10rem",
+                    sm: "11rem",
                   },
                   height: {
                     xs: "2rem",
@@ -210,6 +212,6 @@ export const Contact = (props: any) => {
           </FormControl>
         </form>
       </Paper>
-    </Container>
+    </Box>
   );
 };

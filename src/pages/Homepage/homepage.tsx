@@ -16,11 +16,11 @@ export const Homepage = (props: any) => {
         width: "80%",
         height: {
           xs: "30vh",
-          sm: "70vh",
+          sm: "30vh",
         },
         marginBottom: {
-          xs:"0",
-          sm:"5rem"
+          xs: "0",
+          lg: "5rem",
         },
       }}
     >
@@ -30,6 +30,10 @@ export const Homepage = (props: any) => {
           height: {
             xs: "fit-content",
             xl: "80%",
+            display:"flex",
+            justifyContent:"center",
+            alignItems:"center",
+            marginTop:{sm:"2rem"}
           },
         }}
       >
@@ -43,7 +47,8 @@ export const Homepage = (props: any) => {
             alignItems: "center",
             marginTop: {
               xs: "2rem",
-              sm: "6rem",
+              sm: "0rem",
+              lg: "6rem",
             },
             order: {
               xs: 2,
@@ -53,8 +58,8 @@ export const Homepage = (props: any) => {
         >
           <Box
             sx={{
-              height:{
-                xs:"60%"
+              height: {
+                xs: "60%",
               },
               display: "flex",
               flexDirection: "column",
@@ -94,7 +99,8 @@ export const Homepage = (props: any) => {
             alignItems: "center",
             marginTop: {
               xs: "2rem",
-              sm: "6rem",
+              sm: "0rem",
+              lg: "6rem",
             },
             order: {
               xs: 1,
@@ -106,13 +112,13 @@ export const Homepage = (props: any) => {
             sx={{
               width: {
                 xs: "100px",
-                sm: "250",
+                sm: "200px",
                 lg: "350px",
                 xl: "450px",
               },
               height: {
                 xs: "100px",
-                sm: "250",
+                sm: "200px",
                 lg: "350px",
                 xl: "450px",
               },
@@ -134,4 +140,3 @@ export const Homepage = (props: any) => {
     </Container>
   );
 };
-

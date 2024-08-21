@@ -1,10 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Box, Grid, Link, Typography } from "@mui/material";
+import { Box, Grid, Link, Theme, Typography, useMediaQuery } from "@mui/material";
 
 import { faCopyright } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export const Footer = () => {
+  const mobileQuery = useMediaQuery((theme: Theme) =>
+    theme.breakpoints.between("xs", "sm")
+  );
   return (
     <Box
       sx={{
@@ -18,8 +21,12 @@ export const Footer = () => {
         justifyContent="space-evenly"
         sx={{ width: "100%" }}
       >
-        <Grid item xs={6} alignItems={"center"}>
-          <FontAwesomeIcon icon={faCopyright} />
+        <Grid item xs={6} sx={{
+          display:"flex",
+          justifyContent:"center",
+          alignItems:"center"
+        }}>
+          <FontAwesomeIcon icon={faCopyright} size={mobileQuery ? "xs": "sm"}/>
           <Typography
             variant="h4"
             sx={{ display: "inline", marginLeft: "4px" }}

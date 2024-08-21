@@ -62,6 +62,23 @@ export const overridesTheme = (outerTheme: Theme) =>
           fontSize: "1.6rem",
         },
       },
+      h5: {
+        fontFamily: "Alpino",
+        fontWeight: "400",
+        fontSize: "1.2rem",
+        [outerTheme.breakpoints.between("xs", "sm")]: {
+          fontSize: "0.9rem",
+        },
+        [outerTheme.breakpoints.up("sm")]: {
+          fontSize: "1.1rem",
+        },
+        [outerTheme.breakpoints.up("lg")]: {
+          fontSize: "1.3rem",
+        },
+        [outerTheme.breakpoints.up("xl")]: {
+          fontSize: "1.5rem",
+        },
+      },
       h6: {
         fontFamily: "Alpino",
         fontWeight: "400",
@@ -82,10 +99,10 @@ export const overridesTheme = (outerTheme: Theme) =>
       button: {
         letterSpacing: "0.2rem",
         [outerTheme.breakpoints.between("xs", "sm")]: {
-          fontSize: "0.6rem",
+          fontSize: "0.5rem",
         },
         [outerTheme.breakpoints.up("sm")]: {
-          fontSize: "0.8rem",
+          fontSize: "0.7rem",
         },
         [outerTheme.breakpoints.up("lg")]: {
           fontSize: "1.0rem",
@@ -170,7 +187,7 @@ export const overridesTheme = (outerTheme: Theme) =>
               borderColor: "var(--TextField-brandBorderFocusedColor)",
             },
             [outerTheme.breakpoints.between("xs", "sm")]: {
-              
+              height: "2rem",
             },
             [outerTheme.breakpoints.up("sm")]: {
               fontSize: "0.8rem",

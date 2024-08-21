@@ -2,6 +2,7 @@ import { Button, Grid, Link, Typography } from "@mui/material";
 
 interface INavBarItem {
   children: any;
+  xs:number
 }
 
 export const NavBar = (props: any) => {
@@ -11,9 +12,11 @@ export const NavBar = (props: any) => {
       sx={{
         padding: 0,
         margin: 0,
-        marginBottom:{
-          xs:"2rem"
-        
+        marginTop: {
+          xs: "1rem",
+        },
+        marginBottom: {
+          xs: "2rem",
         },
         height: "15%",
 
@@ -38,8 +41,7 @@ export const NavBar = (props: any) => {
           sx={{
             fontVariant: "small-caps",
             justifySelf: "left",
-            // position:"fixed",
-            // left:"30px",
+            marginLeft:"30px"
           }}
         >
           Maximilian Schnitt
@@ -55,28 +57,35 @@ export const NavBar = (props: any) => {
             justifyContent: "space-evenly",
           }}
         >
-          <NavBarItem>
-            <Typography variant="h4">
+          <NavBarItem xs={4}>
+            <Typography variant="h5">
               <Link href="#work-section">Work</Link>
             </Typography>
           </NavBarItem>
-          <NavBarItem>
+          <NavBarItem xs={8}>
             <Button
               variant="contained"
               sx={{
                 width: {
-                  xs:"12rem",
-                  sm:"7rem"},
+                  xs: "6rem",
+                  sm: "7rem",
+                },
                 height: {
-                  xs:"1.7rem",
-                  sm:"3rem"},
+                  xs: "1.7rem",
+                  sm: "3rem",
+                },
                 borderRadius: "10px",
               }}
               href="#contact-section"
             >
-              <Typography variant="button" sx={{
-                fontSize:"0.4rem"
-              }}>Contact</Typography>
+              <Typography
+                variant="button"
+                sx={{
+                  fontSize: "0.1rem",
+                }}
+              >
+                Contact
+              </Typography>
             </Button>
           </NavBarItem>
         </Grid>
@@ -89,7 +98,7 @@ const NavBarItem = (props: INavBarItem) => {
   return (
     <Grid
       item
-      xs={4}
+      xs={props.xs}
       sx={{
         padding: 0,
         margin: 0,

@@ -59,7 +59,7 @@ export const Work = () => {
         width: "100%",
         height: {
           xs:"45vh",
-          sm:"80vh"},
+          sm:"47vh",},
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
