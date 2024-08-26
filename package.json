@@ -34,7 +34,8 @@
     "format": "prettier 'src/**/*.{js,ts,jsx,tsx,json}' --write",
     "check-format": "prettier 'src/**/*.{js,ts,jsx,tsx,json}' --check",
     "build": "react-scripts build",
-	"deploy": "gh-pages -d build", 
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
