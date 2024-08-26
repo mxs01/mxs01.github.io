@@ -9,10 +9,8 @@ import {
 import { useEffect, useState } from 'react'
 import { WorkComponent } from '../../components/WorkComponent/WorkComponent'
 
-import ExamplePicture1 from '../../images/Work/ProjectExample2.jpeg'
-import ExamplePicture2 from '../../images/Work/ProjectExample3.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 interface Project {
   image: any
