@@ -73,7 +73,7 @@ export const Contact = () => {
         justifyContent: 'center',
         alignItems: 'center',
         marginBottom: {
-          lg: '6rem',
+          xs: '6rem',
           xl: '10rem',
         },
       }}>

@@ -19,7 +19,7 @@ export const Footer = () => {
     <Box
       sx={{
         width: '100%',
-        height: '6rem',
+        height: '3rem',
       }}>
       <Grid
         container

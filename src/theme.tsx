@@ -22,10 +22,10 @@ export const overridesTheme = (outerTheme: Theme) =>
         fontFamily: 'Outfit',
         fontWeight: 'bold',
         [outerTheme.breakpoints.between('xs', 'sm')]: {
-          fontSize: '1.2rem',
+          fontSize: '1.8rem',
         },
         [outerTheme.breakpoints.up('sm')]: {
-          fontSize: '1.7rem',
+          fontSize: '2.2rem',
         },
         [outerTheme.breakpoints.up('lg')]: {
           fontSize: '2.5rem',
@@ -35,19 +35,18 @@ export const overridesTheme = (outerTheme: Theme) =>
         },
       },
       h2: {
+        fontWeight: '500',
         [outerTheme.breakpoints.between('xs', 'sm')]: {
           fontSize: '1.2rem',
         },
         [outerTheme.breakpoints.up('sm')]: {
-          fontSize: '1.5rem',
+          fontSize: '2rem',
         },
         [outerTheme.breakpoints.up('lg')]: {
           fontSize: '2.3rem',
-          fontWeight: '500',
         },
         [outerTheme.breakpoints.up('xl')]: {
           fontSize: '3.0rem',
-          fontWeight: '500',
         },
       },
       h3: {
@@ -267,9 +266,6 @@ export const overridesTheme = (outerTheme: Theme) =>
             color: 'white',
             '&::before': {
               borderBottom: '2px solid var(--TextField-brandBorderColor)',
-              [outerTheme.breakpoints.between('xs', 'sm')]: {
-                lineHeight: '0.1rem',
-              },
             },
             '&:hover:not(.Mui-disabled, .Mui-error):before': {
               borderBottom: '2px solid var(--TextField-brandBorderHoverColor)',

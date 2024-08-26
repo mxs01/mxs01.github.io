@@ -10,7 +10,7 @@ export const Homepage = () => {
       sx={{
         width: '80%',
         marginBottom: {
-          xs: '7em',
+          xs: '5em',
           lg: '8rem',
           xl: '18rem',
         },

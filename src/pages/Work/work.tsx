@@ -170,6 +170,7 @@ const NoProjectsAvailable = (props: { size: SizeProp }) => {
         variant="h2"
         sx={{
           color: 'white',
+          textAlign: 'center',
         }}>
         No projects available
       </Typography>
