@@ -1,8 +1,8 @@
 import { Button, Grid, Link, Typography } from '@mui/material'
 
 interface INavBarItem {
-    children: any
-    xs: number
+  children: any
+  xs: number
 }
 
 export const NavBar = () => {
@@ -26,8 +26,7 @@ export const NavBar = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-      }}
-    >
+      }}>
       <Grid
         item
         xs={6}
@@ -39,17 +38,15 @@ export const NavBar = () => {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-        }}
-      >
+        }}>
         <Typography
           variant="h2"
           sx={{
             fontVariant: 'small-caps',
             justifySelf: 'left',
             marginLeft: '30px',
-          }}
-        >
-                    Maximilian Schnitt
+          }}>
+          Maximilian Schnitt
         </Typography>
       </Grid>
       <Grid item xs={6}>
@@ -60,8 +57,7 @@ export const NavBar = () => {
             flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'space-evenly',
-          }}
-        >
+          }}>
           <NavBarItem xs={4}>
             <Typography variant="h5">
               <Link href="#work-section">Work</Link>
@@ -81,15 +77,13 @@ export const NavBar = () => {
                 },
                 borderRadius: '10px',
               }}
-              href="#contact-section"
-            >
+              href="#contact-section">
               <Typography
                 variant="button"
                 sx={{
                   fontSize: '0.1rem',
-                }}
-              >
-                                Contact
+                }}>
+                Contact
               </Typography>
             </Button>
           </NavBarItem>
@@ -111,8 +105,7 @@ const NavBarItem = (props: INavBarItem) => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-      }}
-    >
+      }}>
       {props.children}
     </Grid>
   )

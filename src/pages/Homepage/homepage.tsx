@@ -16,8 +16,7 @@ export const Homepage = () => {
         marginTop: {
           sm: '4rem',
         },
-      }}
-    >
+      }}>
       <Grid
         container
         sx={{
@@ -29,8 +28,7 @@ export const Homepage = () => {
             alignItems: 'center',
             marginTop: { sm: '2rem' },
           },
-        }}
-      >
+        }}>
         <Grid
           item
           sm={6}
@@ -48,8 +46,7 @@ export const Homepage = () => {
               xs: 2,
               sm: 1,
             },
-          }}
-        >
+          }}>
           <Box
             sx={{
               height: {
@@ -59,8 +56,7 @@ export const Homepage = () => {
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'left',
-            }}
-          >
+            }}>
             <Typography variant="h1" sx={{}}>
               Hi I'm Max,
               <br />
@@ -74,8 +70,7 @@ export const Homepage = () => {
                 width: '60%',
                 gap: '0.8rem',
                 marginBottom: '20px',
-              }}
-            >
+              }}>
               <Typography variant="h6">React</Typography>
               <Typography variant="h6">TypeScript</Typography>
               <Typography variant="h6">Python</Typography>
@@ -100,8 +95,7 @@ export const Homepage = () => {
               xs: 1,
               sm: 2,
             },
-          }}
-        >
+          }}>
           <Box
             sx={{
               width: {
@@ -121,13 +115,11 @@ export const Homepage = () => {
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
-            }}
-          >
+            }}>
             <img
               id={classes.profilePicture}
               src={profilePicture}
-              alt="Me"
-            ></img>
+              alt="Me"></img>
           </Box>
         </Grid>
       </Grid>

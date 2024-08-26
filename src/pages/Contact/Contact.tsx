@@ -14,7 +14,7 @@ import { useState } from 'react'
 
 export const Contact = () => {
   const mobileQuery = useMediaQuery((theme: Theme) =>
-    theme.breakpoints.between('xs', 'sm'),
+    theme.breakpoints.between('xs', 'sm')
   )
 
   const [nameInput, setNameInput] = useState('')
@@ -38,7 +38,7 @@ export const Contact = () => {
           subject: subjectInput,
           message: contentInput,
         },
-        process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY ?? '',
+        process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY ?? ''
       )
       .then(
         () => {
@@ -51,7 +51,7 @@ export const Contact = () => {
         },
         () => {
           alert('Something went wrong, please try it again!')
-        },
+        }
       )
   }
 
@@ -59,9 +59,7 @@ export const Contact = () => {
     if (mailInput.trim() === '') {
       setValidEmail(true)
     } else {
-      const reg = new RegExp(
-        '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.(com|de|fr)',
-      )
+      const reg = new RegExp('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.(com|de|fr)')
       setValidEmail(reg.test(mailInput))
     }
   }
@@ -74,8 +72,7 @@ export const Contact = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-      }}
-    >
+      }}>
       <Paper
         elevation={3}
         sx={{
@@ -89,8 +86,7 @@ export const Contact = () => {
             xs: '1rem',
             sm: '2rem',
           },
-        }}
-      >
+        }}>
         <Typography
           variant="h3"
           textAlign={'center'}
@@ -100,9 +96,8 @@ export const Contact = () => {
             fontFamily: 'Outfit',
             fontWeight: '400',
             marginBottom: '0.8rem',
-          }}
-        >
-                    Contact Me
+          }}>
+          Contact Me
         </Typography>
         <form onSubmit={(e) => sendEmail(e)}>
           <FormControl
@@ -110,8 +105,7 @@ export const Contact = () => {
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'left',
-            }}
-          >
+            }}>
             <FormGroup row>
               <TextField
                 label="Name"
@@ -132,9 +126,7 @@ export const Contact = () => {
                 }}
                 error={!validEmail}
                 required
-                helperText={
-                  !validEmail && 'Incorrect email adress.'
-                }
+                helperText={!validEmail && 'Incorrect email adress.'}
                 onBlur={verifyMail}
                 value={mailInput}
                 onChange={(e) => setMailInput(e.target.value)}
@@ -146,9 +138,7 @@ export const Contact = () => {
                 fullWidth
                 margin="dense"
                 value={subjectInput}
-                onChange={(e) =>
-                  setSubjectInput(e.target.value)
-                }
+                onChange={(e) => setSubjectInput(e.target.value)}
                 required
               />
             </FormGroup>
@@ -156,8 +146,7 @@ export const Contact = () => {
               row
               sx={{
                 marginBottom: '1.3rem',
-              }}
-            >
+              }}>
               <TextField
                 rows={mobileQuery ? 3 : 5}
                 multiline
@@ -165,9 +154,7 @@ export const Contact = () => {
                 fullWidth
                 margin="dense"
                 value={contentInput}
-                onChange={(e) =>
-                  setContentInput(e.target.value)
-                }
+                onChange={(e) => setContentInput(e.target.value)}
                 required
               />
             </FormGroup>
@@ -177,8 +164,7 @@ export const Contact = () => {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-              }}
-            >
+              }}>
               <Button
                 type="submit"
                 disabled={buttonDisabled}
@@ -198,16 +184,14 @@ export const Contact = () => {
                   '&:disabled': {
                     backgroundColor: '#f6f6f6',
                   },
-                }}
-              >
+                }}>
                 <Typography
                   variant="button"
                   sx={{
                     color: 'black',
                     letterSpacing: '0.2rem',
-                  }}
-                >
-                                    Contact Me
+                  }}>
+                  Contact Me
                 </Typography>
               </Button>
             </FormGroup>

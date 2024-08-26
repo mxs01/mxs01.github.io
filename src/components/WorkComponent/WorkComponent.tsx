@@ -2,10 +2,10 @@ import { Box, Grid, Paper, Typography } from '@mui/material'
 import classes from './WorkComponent.module.css'
 
 interface IWorkComp {
-    image: any
-    content: string
-    title: string
-    even: boolean
+  image: any
+  content: string
+  title: string
+  even: boolean
 }
 
 type IImageComp = Pick<IWorkComp, 'image'>
@@ -28,8 +28,7 @@ export const WorkComponent = (props: IWorkComp) => {
         paddingBottom: {
           sm: '3rem',
         },
-      }}
-    >
+      }}>
       <Box
         sx={{
           width: '100%',
@@ -42,16 +41,14 @@ export const WorkComponent = (props: IWorkComp) => {
           marginBottom: {
             sm: '0.4rem',
           },
-        }}
-      >
+        }}>
         <Typography
           variant="h4"
           sx={{
             fontWeight: '600',
             color: 'white',
             letterSpacing: '0.2rem',
-          }}
-        >
+          }}>
           {props.title}
         </Typography>
       </Box>
@@ -63,8 +60,7 @@ export const WorkComponent = (props: IWorkComp) => {
             xs: '45%',
             sm: '90%',
           },
-        }}
-      >
+        }}>
         <Grid
           item
           sm={6}
@@ -77,8 +73,7 @@ export const WorkComponent = (props: IWorkComp) => {
               xs: props.even ? 1 : 2,
               sm: 1,
             },
-          }}
-        >
+          }}>
           {props.even && <ImageComp image={props.image} />}
           {!props.even && <TextComp content={props.content} />}
         </Grid>
@@ -94,8 +89,7 @@ export const WorkComponent = (props: IWorkComp) => {
               xs: props.even ? 2 : 1,
               sm: 1,
             },
-          }}
-        >
+          }}>
           {props.even && <TextComp content={props.content} />}
           {!props.even && <ImageComp image={props.image} />}
         </Grid>
@@ -127,8 +121,7 @@ const ImageComp = (props: IImageComp) => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-      }}
-    >
+      }}>
       <img id={classes.image} src={props.image} alt="Work Image"></img>
     </Box>
   )
@@ -146,8 +139,7 @@ const TextComp = (props: ITextComp) => {
         alignItems: 'center',
         color: 'white',
         overflowX: 'scroll',
-      }}
-    >
+      }}>
       <Typography
         variant="body1"
         sx={{
@@ -156,8 +148,7 @@ const TextComp = (props: ITextComp) => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-        }}
-      >
+        }}>
         {props.content}
       </Typography>
     </Box>

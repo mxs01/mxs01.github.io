@@ -6,9 +6,9 @@ import ExamplePicture1 from '../../images/Work/ProjectExample2.jpeg'
 import ExamplePicture2 from '../../images/Work/ProjectExample3.png'
 
 interface Project {
-    image: any
-    title: string
-    content: string
+  image: any
+  title: string
+  content: string
 }
 
 const projects: Project[] = [
@@ -59,8 +59,7 @@ export const Work = () => {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-      }}
-    >
+      }}>
       <Typography
         variant="h3"
         sx={{
@@ -68,21 +67,20 @@ export const Work = () => {
           fontWeight: 'bold',
           fontSize: '2.3rem',
           marginBottom: '0.5rem',
-        }}
-      >
-                Recent Work
+        }}>
+        Recent Work
       </Typography>
       {projects.length < 0 && <NoProjectsAvailable />}
       {projects.length > 0 &&
-                displayedPages.map((el, idx) => (
-                	<WorkComponent
-                		image={el.image}
-                		title={el.title}
-                		key={`work_${idx}`}
-                		even={idx % 2 === 0}
-                		content={el.content}
-                	/>
-                ))}
+        displayedPages.map((el, idx) => (
+          <WorkComponent
+            image={el.image}
+            title={el.title}
+            key={`work_${idx}`}
+            even={idx % 2 === 0}
+            content={el.content}
+          />
+        ))}
       {projects.length > 0 && (
         <Pagination
           count={PAGINATION_NODES}

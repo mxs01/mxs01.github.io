@@ -30,6 +30,8 @@
   "scripts": {
     "start": "react-scripts start",
     "lint": "eslint --fix -c eslint.config.js",
+	"format": "prettier 'src/**/*.{js,ts,jsx,tsx,json}' --write",
+    "check-format": "prettier 'src/**/*.{js,ts,jsx,tsx,json}' --check",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
