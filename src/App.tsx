@@ -8,7 +8,7 @@ import { NavBar } from './components/NavBar/NavBar'
 
 function App() {
   return (
-    <Container maxWidth="xl" disableGutters sx={{}}>
+    <Container maxWidth={false} disableGutters sx={{}}>
       <NavBar />
       <Homepage />
       <Work />

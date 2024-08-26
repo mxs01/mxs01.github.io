@@ -19,32 +19,33 @@ export const NavBar = () => {
         marginBottom: {
           xs: '2rem',
         },
-        height: '15%',
+        height: '17%',
 
         zIndex: '100',
         backgroundColor: 'white',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'left',
       }}>
       <Grid
         item
         xs={6}
         sx={{
+          width: '100%',
           height: '100%',
           padding: 0,
           margin: 0,
           textAlign: 'left',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center',
+          justifyContent: 'left',
         }}>
         <Typography
           variant="h2"
           sx={{
             fontVariant: 'small-caps',
             justifySelf: 'left',
-            marginLeft: '30px',
+            marginLeft: '60px',
           }}>
           Maximilian Schnitt
         </Typography>
@@ -53,13 +54,14 @@ export const NavBar = () => {
         <Grid
           container
           sx={{
+            height: '100%',
             display: 'flex',
             flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'space-evenly',
           }}>
           <NavBarItem xs={4}>
-            <Typography variant="h5">
+            <Typography variant="h5" sx={{ height: '100%' }}>
               <Link href="#work-section">Work</Link>
             </Typography>
           </NavBarItem>

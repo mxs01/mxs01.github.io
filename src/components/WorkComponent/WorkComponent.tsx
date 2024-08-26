@@ -15,11 +15,8 @@ type ITextComp = Pick<IWorkComp, 'content'>
 export const WorkComponent = (props: IWorkComp) => {
   return (
     <Paper
-      elevation={3}
       sx={{
-        width: '60%',
-        height: '20rem',
-        backgroundColor: '#3E5C76',
+        height: { xs: '20rem', xl: '30rem' },
         marginBottom: '1rem',
         padding: {
           xs: '1rem',
@@ -66,6 +63,8 @@ export const WorkComponent = (props: IWorkComp) => {
           sm={6}
           xs={12}
           sx={{
+            width: '100%',
+            height: '100%',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
@@ -102,6 +101,8 @@ const ImageComp = (props: IImageComp) => {
   return (
     <Box
       sx={{
+        width: '100%',
+        height: '100%',
         maxHeight: {
           xs: '85%',
           sm: '100%',
@@ -111,12 +112,6 @@ const ImageComp = (props: IImageComp) => {
           sm: '100%',
         },
 
-        width: {
-          xs: 'auto',
-        },
-        height: {
-          xs: 'auto',
-        },
         overflow: 'hidden',
         display: 'flex',
         justifyContent: 'center',

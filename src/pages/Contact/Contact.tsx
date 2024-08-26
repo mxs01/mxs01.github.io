@@ -1,3 +1,4 @@
+import classes from './Contact.module.css'
 import emailjs from '@emailjs/browser'
 import {
   Box,
@@ -72,26 +73,26 @@ export const Contact = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        marginBottom: {
+          xl: '10rem',
+        },
       }}>
       <Paper
-        elevation={3}
         sx={{
-          width: {
-            xs: '60%',
-            sm: '60%',
-          },
+          minHeight: '30rem',
           height: 'fit-content',
-          backgroundColor: '#3C5D76',
+
           padding: {
             xs: '1rem',
             sm: '2rem',
+            xl: '1rem',
           },
         }}>
         <Typography
           variant="h3"
           textAlign={'center'}
           sx={{
-            padding: '0.5rem',
+            padding: '0.5em',
             color: 'white',
             fontFamily: 'Outfit',
             fontWeight: '400',
@@ -99,9 +100,10 @@ export const Contact = () => {
           }}>
           Contact Me
         </Typography>
-        <form onSubmit={(e) => sendEmail(e)}>
+        <form id={classes.form}onSubmit={(e) => sendEmail(e)}>
           <FormControl
             sx={{
+              width: '70%',
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'left',
@@ -176,6 +178,7 @@ export const Contact = () => {
                   },
                   height: {
                     xs: '2rem',
+                    xl: '3.5rem',
                   },
                   backgroundColor: '#FFDF68',
                   '&:hover': {

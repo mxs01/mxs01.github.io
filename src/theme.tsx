@@ -31,7 +31,7 @@ export const overridesTheme = (outerTheme: Theme) =>
           fontSize: '2.5rem',
         },
         [outerTheme.breakpoints.up('xl')]: {
-          fontSize: '3.4rem',
+          fontSize: '3.5rem',
         },
       },
       h2: {
@@ -46,6 +46,7 @@ export const overridesTheme = (outerTheme: Theme) =>
         },
         [outerTheme.breakpoints.up('xl')]: {
           fontSize: '3.0rem',
+          fontWeight: '500',
         },
       },
       h3: {
@@ -91,6 +92,7 @@ export const overridesTheme = (outerTheme: Theme) =>
         },
         [outerTheme.breakpoints.up('xl')]: {
           fontSize: '1.5rem',
+		  fontWeight: '450',
         },
       },
       h6: {
@@ -122,7 +124,7 @@ export const overridesTheme = (outerTheme: Theme) =>
           fontSize: '1.0rem',
         },
         [outerTheme.breakpoints.up('xl')]: {
-          fontSize: '1.1rem',
+          fontSize: '0.9rem',
         },
       },
       body1: {
@@ -161,6 +163,28 @@ export const overridesTheme = (outerTheme: Theme) =>
             padding: 0,
             margin: 0,
           },
+        },
+      },
+      MuiPaper: {
+        styleOverrides: {
+          root: {
+            elevation: 3,
+            backgroundColor: '#3E5C76',
+            height: 'fit-content',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            [outerTheme.breakpoints.between('xs', 'lg')]: {
+              width: '60%',
+            },
+            [outerTheme.breakpoints.up('xl')]: {
+              width: '50%',
+            },
+          },
+        },
+        defaultProps: {
+          elevation: 24,
         },
       },
       MuiLink: {

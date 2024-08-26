@@ -30,7 +30,7 @@
   "scripts": {
     "start": "react-scripts start",
     "lint": "eslint --fix -c eslint.config.js",
-	"format": "prettier 'src/**/*.{js,ts,jsx,tsx,json}' --write",
+    "format": "prettier 'src/**/*.{js,ts,jsx,tsx,json}' --write",
     "check-format": "prettier 'src/**/*.{js,ts,jsx,tsx,json}' --check",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -69,7 +69,7 @@
     "tabWidth": 2,
     "semi": false,
     "singleQuote": true,
-	"arrowParens": "always",
-  "bracketSameLine": true
+    "arrowParens": "always",
+    "bracketSameLine": true
   }
 }

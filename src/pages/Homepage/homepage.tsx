@@ -12,6 +12,7 @@ export const Homepage = () => {
         marginBottom: {
           xs: '16em',
           lg: '5rem',
+          xl: '18rem',
         },
         marginTop: {
           sm: '4rem',
@@ -102,13 +103,13 @@ export const Homepage = () => {
                 xs: '100px',
                 sm: '200px',
                 lg: '350px',
-                xl: '450px',
+                xl: '400px',
               },
               height: {
                 xs: '100px',
                 sm: '200px',
                 lg: '350px',
-                xl: '450px',
+                xl: '400px',
               },
               borderRadius: '100%',
               overflow: 'hidden',
