@@ -45,7 +45,12 @@ export const NavBar = () => {
           sx={{
             fontVariant: 'small-caps',
             justifySelf: 'left',
-            marginLeft: '60px',
+            marginLeft: {
+              xs: '20px',
+              sm: '30px',
+              lg: '40px',
+              xl: '60px',
+            },
           }}>
           Maximilian Schnitt
         </Typography>

@@ -43,6 +43,7 @@ export const overridesTheme = (outerTheme: Theme) =>
         },
         [outerTheme.breakpoints.up('lg')]: {
           fontSize: '2.3rem',
+          fontWeight: '500',
         },
         [outerTheme.breakpoints.up('xl')]: {
           fontSize: '3.0rem',
@@ -89,10 +90,11 @@ export const overridesTheme = (outerTheme: Theme) =>
         },
         [outerTheme.breakpoints.up('lg')]: {
           fontSize: '1.3rem',
+          fontWeight: '450',
         },
         [outerTheme.breakpoints.up('xl')]: {
           fontSize: '1.5rem',
-		  fontWeight: '450',
+          fontWeight: '450',
         },
       },
       h6: {
@@ -121,9 +123,6 @@ export const overridesTheme = (outerTheme: Theme) =>
           fontSize: '0.7rem',
         },
         [outerTheme.breakpoints.up('lg')]: {
-          fontSize: '1.0rem',
-        },
-        [outerTheme.breakpoints.up('xl')]: {
           fontSize: '0.9rem',
         },
       },
@@ -175,11 +174,22 @@ export const overridesTheme = (outerTheme: Theme) =>
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            [outerTheme.breakpoints.between('xs', 'lg')]: {
+            [outerTheme.breakpoints.between('xs', 'sm')]: {
               width: '60%',
+              height: '20rem',
+              padding: '1rem',
+            },
+            [outerTheme.breakpoints.between('sm', 'lg')]: {
+              width: '60%',
+              padding: '2rem',
+            },
+            [outerTheme.breakpoints.between('lg', 'xl')]: {
+              width: '60%',
+              padding: '1rem',
             },
             [outerTheme.breakpoints.up('xl')]: {
               width: '50%',
+              padding: '1rem',
             },
           },
         },
@@ -224,7 +234,7 @@ export const overridesTheme = (outerTheme: Theme) =>
               borderColor: 'var(--TextField-brandBorderFocusedColor)',
             },
             [outerTheme.breakpoints.between('xs', 'sm')]: {
-              height: '2rem',
+              lineHeight: '0.5rem',
             },
             [outerTheme.breakpoints.up('sm')]: {
               fontSize: '0.8rem',
@@ -245,6 +255,9 @@ export const overridesTheme = (outerTheme: Theme) =>
               borderBottom:
                 '2px solid var(--TextField-brandBorderFocusedColor)',
             },
+            [outerTheme.breakpoints.between('xs', 'sm')]: {
+              lineHeight: '0.5rem',
+            },
           },
         },
       },
@@ -252,16 +265,16 @@ export const overridesTheme = (outerTheme: Theme) =>
         styleOverrides: {
           root: {
             color: 'white',
-            [outerTheme.breakpoints.between('xs', 'sm')]: {},
-            [outerTheme.breakpoints.up('sm')]: {
-              fontSize: '0.8rem',
-            },
             '&::before': {
               borderBottom: '2px solid var(--TextField-brandBorderColor)',
+              [outerTheme.breakpoints.between('xs', 'sm')]: {
+                lineHeight: '0.1rem',
+              },
             },
             '&:hover:not(.Mui-disabled, .Mui-error):before': {
               borderBottom: '2px solid var(--TextField-brandBorderHoverColor)',
             },
+
             '&.Mui-focused:after': {
               borderBottom:
                 '2px solid var(--TextField-brandBorderFocusedColor)',

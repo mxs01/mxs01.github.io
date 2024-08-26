@@ -19,7 +19,7 @@ export const Footer = () => {
     <Box
       sx={{
         width: '100%',
-        height: '5vh',
+        height: '6rem',
       }}>
       <Grid
         container
@@ -30,19 +30,33 @@ export const Footer = () => {
           item
           xs={6}
           sx={{
+            width: '100%',
             display: 'flex',
-            justifyContent: 'center',
+            justifyContent: 'left',
             alignItems: 'center',
           }}>
-          <FontAwesomeIcon
-            icon={faCopyright}
-            size={mobileQuery ? 'xs' : 'sm'}
-          />
-          <Typography
-            variant="h4"
-            sx={{ display: 'inline', marginLeft: '4px' }}>
-            Maximilian Schnitt
-          </Typography>
+          <Box
+            sx={{
+              width: '100%',
+              marginLeft: {
+                xs: '20px',
+                sm: '30px',
+                lg: '40px',
+                xl: '60px',
+              },
+              display: 'flex',
+              alignItems: 'center',
+            }}>
+            <FontAwesomeIcon
+              icon={faCopyright}
+              size={mobileQuery ? 'xs' : 'sm'}
+            />
+            <Typography
+              variant="h4"
+              sx={{ display: 'inline', marginLeft: '6px' }}>
+              Maximilian Schnitt
+            </Typography>
+          </Box>
         </Grid>
         <Grid item xs={6}>
           <Grid container>

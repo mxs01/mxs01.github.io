@@ -26,7 +26,7 @@ export default [
       quotes: ['error', 'single'], // Enforce single quotes
       'no-unused-vars': 'warn', // Warn on variables that are defined but never used
       eqeqeq: 'error', // Require === and !==
-      'comma-dangle': ['error', 'always-multiline'], // Require trailing commas for multiline statements
+      'comma-dangle': ['error', 'only-multiline'], // Require trailing commas for multiline statements
       'react/react-in-jsx-scope': 'off',
       'jsx-a11y/img-redundant-alt': 'off',
       '@typescript-eslint/no-explicit-any': 'off',

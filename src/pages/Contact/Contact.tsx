@@ -17,7 +17,6 @@ export const Contact = () => {
   const mobileQuery = useMediaQuery((theme: Theme) =>
     theme.breakpoints.between('xs', 'sm')
   )
-
   const [nameInput, setNameInput] = useState('')
   const [mailInput, setMailInput] = useState('')
   const [subjectInput, setSubjectInput] = useState('')
@@ -74,12 +73,15 @@ export const Contact = () => {
         justifyContent: 'center',
         alignItems: 'center',
         marginBottom: {
+          lg: '6rem',
           xl: '10rem',
         },
       }}>
       <Paper
         sx={{
-          minHeight: '30rem',
+          minHeight: {
+            lg: '30rem',
+          },
           height: 'fit-content',
 
           padding: {
@@ -100,7 +102,7 @@ export const Contact = () => {
           }}>
           Contact Me
         </Typography>
-        <form id={classes.form}onSubmit={(e) => sendEmail(e)}>
+        <form id={classes.form} onSubmit={(e) => sendEmail(e)}>
           <FormControl
             sx={{
               width: '70%',
@@ -108,15 +110,16 @@ export const Contact = () => {
               justifyContent: 'center',
               alignItems: 'left',
             }}>
-            <FormGroup row>
+            <FormGroup row={!mobileQuery}>
               <TextField
                 label="Name"
                 margin="dense"
                 sx={{
                   marginRight: '2%',
-                  width: '49%',
+                  width: !mobileQuery ? '49%' : '100%',
                 }}
                 value={nameInput}
+                size={mobileQuery ? 'small' : 'medium'}
                 onChange={(e) => setNameInput(e.target.value)}
                 required
               />
@@ -124,14 +127,17 @@ export const Contact = () => {
                 label="E-Mail"
                 margin="dense"
                 sx={{
-                  width: '49%',
+                  width: !mobileQuery ? '49%' : '100%',
                 }}
+                type="email"
                 error={!validEmail}
-                required
+                size={mobileQuery ? 'small' : 'medium'}
                 helperText={!validEmail && 'Incorrect email adress.'}
                 onBlur={verifyMail}
+                fullWidth={mobileQuery}
                 value={mailInput}
                 onChange={(e) => setMailInput(e.target.value)}
+                required
               />
             </FormGroup>
             <FormGroup row>
@@ -139,6 +145,7 @@ export const Contact = () => {
                 label="Subject"
                 fullWidth
                 margin="dense"
+                size={mobileQuery ? 'small' : 'medium'}
                 value={subjectInput}
                 onChange={(e) => setSubjectInput(e.target.value)}
                 required
@@ -150,11 +157,12 @@ export const Contact = () => {
                 marginBottom: '1.3rem',
               }}>
               <TextField
-                rows={mobileQuery ? 3 : 5}
+                rows={!mobileQuery ? 5 : 7}
                 multiline
                 label="Content"
                 fullWidth
                 margin="dense"
+                size={mobileQuery ? 'small' : 'medium'}
                 value={contentInput}
                 onChange={(e) => setContentInput(e.target.value)}
                 required
