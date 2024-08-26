@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "homepage": "https://mxs01.github.io",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.13.0",
@@ -33,6 +34,7 @@
     "format": "prettier 'src/**/*.{js,ts,jsx,tsx,json}' --write",
     "check-format": "prettier 'src/**/*.{js,ts,jsx,tsx,json}' --check",
     "build": "react-scripts build",
+	"deploy": "gh-pages -d build --cname 'https://mxs01.github.io'", 
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -60,6 +62,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.35.0",
+    "gh-pages": "^6.1.1",
     "globals": "^15.9.0",
     "prettier": "3.3.3",
     "typescript-eslint": "^8.2.0"
