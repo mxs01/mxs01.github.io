@@ -10,6 +10,8 @@ jobs:
       uses: actions/checkout@v4
     - name: Install modules
       run: npm install
+    - name: Formatter
+      run: ./node_modules/.bin/prettier "src/**/*.{js,ts,jsx,tsx,json}" --write
     - name: Run ESLint
-      run: ./node_modules/.bin/eslint . -c eslint.config.js 
+      run: ./node_modules/.bin/eslint . -c eslint.config.js --fix
   
