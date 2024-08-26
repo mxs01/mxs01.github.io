@@ -1,33 +1,32 @@
-import {
-  Box,
-  Grid,
-  Paper,
-  Typography,
-} from '@mui/material';
-import classes from './WorkComponent.module.css';
+import { Box, Grid, Paper, Typography } from '@mui/material'
+import classes from './WorkComponent.module.css'
 
 interface IWorkComp {
-  image: any;
-  content: string;
-  title: string;
-  even: boolean;
+    image: any
+    content: string
+    title: string
+    even: boolean
 }
 
-type IImageComp = Pick<IWorkComp, 'image'>;
+type IImageComp = Pick<IWorkComp, 'image'>
 
-type ITextComp = Pick<IWorkComp, 'content'>;
+type ITextComp = Pick<IWorkComp, 'content'>
 
 export const WorkComponent = (props: IWorkComp) => {
   return (
     <Paper
       elevation={3}
       sx={{
-        width: '70%',
+        width: '60%',
         height: '20rem',
         backgroundColor: '#3E5C76',
         marginBottom: '1rem',
         padding: {
           xs: '1rem',
+          sm: '1rem',
+        },
+        paddingBottom: {
+          sm: '3rem',
         },
       }}
     >
@@ -40,6 +39,9 @@ export const WorkComponent = (props: IWorkComp) => {
           alignItems: 'center',
           justifyContent: 'center',
           padding: '0.4rem',
+          marginBottom: {
+            sm: '0.4rem',
+          },
         }}
       >
         <Typography
@@ -99,8 +101,8 @@ export const WorkComponent = (props: IWorkComp) => {
         </Grid>
       </Grid>
     </Paper>
-  );
-};
+  )
+}
 
 const ImageComp = (props: IImageComp) => {
   return (
@@ -115,11 +117,11 @@ const ImageComp = (props: IImageComp) => {
           sm: '100%',
         },
 
-        width:{
-          xs:'auto',
+        width: {
+          xs: 'auto',
         },
-        height:{
-          xs:'auto',
+        height: {
+          xs: 'auto',
         },
         overflow: 'hidden',
         display: 'flex',
@@ -129,19 +131,21 @@ const ImageComp = (props: IImageComp) => {
     >
       <img id={classes.image} src={props.image} alt="Work Image"></img>
     </Box>
-  );
-};
+  )
+}
 
 const TextComp = (props: ITextComp) => {
   return (
     <Box
       sx={{
         width: '90%',
-        height: '100%%',
+        maxHeight: '90%',
+        height: 'auto',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         color: 'white',
+        overflowX: 'scroll',
       }}
     >
       <Typography
@@ -157,6 +161,5 @@ const TextComp = (props: ITextComp) => {
         {props.content}
       </Typography>
     </Box>
-  );
-};
-
+  )
+}

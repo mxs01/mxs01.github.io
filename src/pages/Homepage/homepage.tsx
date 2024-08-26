@@ -1,7 +1,7 @@
-import { Box, Container, Grid, Typography } from '@mui/material';
-import classes from './homepage.module.css';
+import { Box, Container, Grid, Typography } from '@mui/material'
+import classes from './homepage.module.css'
 
-import profilePicture from '../../images/ProfilePicture.jpeg';
+import profilePicture from '../../images/ProfilePicture.jpeg'
 
 export const Homepage = () => {
   return (
@@ -9,13 +9,12 @@ export const Homepage = () => {
       maxWidth="xl"
       sx={{
         width: '80%',
-        height: {
-          xs: '30vh',
-          sm: '30vh',
-        },
         marginBottom: {
-          xs: '0',
+          xs: '16em',
           lg: '5rem',
+        },
+        marginTop: {
+          sm: '4rem',
         },
       }}
     >
@@ -25,10 +24,10 @@ export const Homepage = () => {
           height: {
             xs: 'fit-content',
             xl: '80%',
-            display:'flex',
-            justifyContent:'center',
-            alignItems:'center',
-            marginTop:{sm:'2rem'},
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginTop: { sm: '2rem' },
           },
         }}
       >
@@ -133,5 +132,5 @@ export const Homepage = () => {
         </Grid>
       </Grid>
     </Container>
-  );
-};
+  )
+}

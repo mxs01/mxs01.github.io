@@ -1,8 +1,8 @@
-import { Button, Grid, Link, Typography } from '@mui/material';
+import { Button, Grid, Link, Typography } from '@mui/material'
 
 interface INavBarItem {
-  children: any;
-  xs:number
+    children: any
+    xs: number
 }
 
 export const NavBar = () => {
@@ -10,6 +10,7 @@ export const NavBar = () => {
     <Grid
       container
       sx={{
+        width: '100%',
         padding: 0,
         margin: 0,
         marginTop: {
@@ -22,6 +23,9 @@ export const NavBar = () => {
 
         zIndex: '100',
         backgroundColor: 'white',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
       }}
     >
       <Grid
@@ -34,17 +38,18 @@ export const NavBar = () => {
           textAlign: 'left',
           display: 'flex',
           alignItems: 'center',
+          justifyContent: 'center',
         }}
       >
         <Typography
-          variant="h3"
+          variant="h2"
           sx={{
             fontVariant: 'small-caps',
             justifySelf: 'left',
-            marginLeft:'30px',
+            marginLeft: '30px',
           }}
         >
-          Maximilian Schnitt
+                    Maximilian Schnitt
         </Typography>
       </Grid>
       <Grid item xs={6}>
@@ -84,15 +89,15 @@ export const NavBar = () => {
                   fontSize: '0.1rem',
                 }}
               >
-                Contact
+                                Contact
               </Typography>
             </Button>
           </NavBarItem>
         </Grid>
       </Grid>
     </Grid>
-  );
-};
+  )
+}
 
 const NavBarItem = (props: INavBarItem) => {
   return (
@@ -110,5 +115,5 @@ const NavBarItem = (props: INavBarItem) => {
     >
       {props.children}
     </Grid>
-  );
-};
+  )
+}

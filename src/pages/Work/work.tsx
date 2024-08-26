@@ -1,14 +1,14 @@
-import { Box, Pagination, Typography } from '@mui/material';
-import { useEffect, useState } from 'react';
-import { WorkComponent } from '../../components/WorkComponent/WorkComponent';
+import { Box, Pagination, Typography } from '@mui/material'
+import { useEffect, useState } from 'react'
+import { WorkComponent } from '../../components/WorkComponent/WorkComponent'
 
-import ExamplePicture1 from '../../images/Work/ProjectExample2.jpeg';
-import ExamplePicture2 from '../../images/Work/ProjectExample3.png';
+import ExamplePicture1 from '../../images/Work/ProjectExample2.jpeg'
+import ExamplePicture2 from '../../images/Work/ProjectExample3.png'
 
 interface Project {
-  image: any;
-  title: string;
-  content: string;
+    image: any
+    title: string
+    content: string
 }
 
 const projects: Project[] = [
@@ -32,28 +32,28 @@ const projects: Project[] = [
                 order tracking to create a seamless e-commerce
                 experience.`,
   },
-];
-const amountWorkElements: number = 1;
-const PAGINATION_NODES = Math.round(projects.length / amountWorkElements);
+]
+const amountWorkElements: number = 1
+const PAGINATION_NODES = Math.round(projects.length / amountWorkElements)
 
 export const Work = () => {
-  const [currentPageNumber, setCurrentPageNumber] = useState(1);
-  const [displayedPages, setDisplayedPages] = useState([...projects]);
+  const [currentPageNumber, setCurrentPageNumber] = useState(1)
+  const [displayedPages, setDisplayedPages] = useState([...projects])
 
   useEffect(() => {
-    const startIdx = amountWorkElements * (currentPageNumber - 1);
-    const endIdx = startIdx + amountWorkElements;
-    setDisplayedPages(projects.slice(startIdx, endIdx));
-  }, [currentPageNumber]);
+    const startIdx = amountWorkElements * (currentPageNumber - 1)
+    const endIdx = startIdx + amountWorkElements
+    setDisplayedPages(projects.slice(startIdx, endIdx))
+  }, [currentPageNumber])
 
   return (
     <Box
       id="work-section"
       sx={{
         width: '100%',
-        height: {
-          xs: '45vh',
-          sm: '47vh',
+        marginBottom: {
+          xs: '10em',
+          lg: '12rem',
         },
         display: 'flex',
         flexDirection: 'column',
@@ -70,19 +70,19 @@ export const Work = () => {
           marginBottom: '0.5rem',
         }}
       >
-        Recent Work
+                Recent Work
       </Typography>
       {projects.length < 0 && <NoProjectsAvailable />}
       {projects.length > 0 &&
-        displayedPages.map((el, idx) => (
-          <WorkComponent
-            image={el.image}
-            title={el.title}
-            key={`work_${idx}`}
-            even={idx % 2 === 0}
-            content={el.content}
-          />
-        ))}
+                displayedPages.map((el, idx) => (
+                	<WorkComponent
+                		image={el.image}
+                		title={el.title}
+                		key={`work_${idx}`}
+                		even={idx % 2 === 0}
+                		content={el.content}
+                	/>
+                ))}
       {projects.length > 0 && (
         <Pagination
           count={PAGINATION_NODES}
@@ -91,13 +91,13 @@ export const Work = () => {
         />
       )}
     </Box>
-  );
-};
+  )
+}
 
 const NoProjectsAvailable = () => {
   return (
     <Box>
       <Typography>No projects available</Typography>
     </Box>
-  );
-};
+  )
+}
