@@ -11,7 +11,7 @@ import {
 import { faCopyright } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
-export const Footer = () => {
+export const Footer = (props: { toggleModal: any }) => {
   const mobileQuery = useMediaQuery((theme: Theme) => {
     return theme.breakpoints.between('xs', 'sm')
   })
@@ -36,6 +36,7 @@ export const Footer = () => {
             alignItems: 'center',
           }}>
           <Box
+            onClick={() => props.toggleModal(true)}
             sx={{
               width: '100%',
               marginLeft: {

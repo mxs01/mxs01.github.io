@@ -149,5 +149,3 @@ const TextComp = (props: ITextComp) => {
     </Box>
   )
 }
-
-
