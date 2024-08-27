@@ -6,6 +6,8 @@ export const Impressum = (props: { closeModal: () => void }) => {
       sx={{
         width: '100%',
         height: {
+          xs: '20rem',
+          sm: '20rem',
           lg: '35rem',
         },
         display: 'flex',
@@ -16,7 +18,10 @@ export const Impressum = (props: { closeModal: () => void }) => {
       <Typography
         variant="h1"
         sx={{
-          marginBottom: '3rem',
+          marginBottom: {
+            xs: '1rem',
+            sm: '3rem',
+          },
           color: 'white',
           fontWeight: '450',
         }}>
@@ -31,12 +36,12 @@ export const Impressum = (props: { closeModal: () => void }) => {
           onClick={props.closeModal}
           sx={{
             width: {
-              xs: '10rem',
+              xs: '5rem',
               sm: '11rem',
               xl: '12rem',
             },
             height: {
-              xs: '2rem',
+              xs: '1rem',
               xl: '3.5rem',
             },
             backgroundColor: '#FFC107',
@@ -44,8 +49,11 @@ export const Impressum = (props: { closeModal: () => void }) => {
               backgroundColor: '#FFB007',
             },
             marginLeft: '10px',
+            fontSize: '0.1rem',
           }}>
-          Contact Me
+          <Typography variant="button">
+            Contact
+          </Typography>
         </Button>
         <br />
         <br />
